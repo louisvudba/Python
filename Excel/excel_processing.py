@@ -156,7 +156,7 @@ def filter_unit():
                     text_value = ''
                 else:
                     text_value = str(cell_value)        
-                result = ''
+                result = data["default_unit"]
                 for item in filter_dict:
                     if pd.isna(item['Filter']):
                         filter_value = ''
