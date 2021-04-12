@@ -1,0 +1,916 @@
+DisplayName,UserId,Id,Score,Text
+Archibald,1478655,26730310,849,Please stop supporting IE5/IE6
+Teemu Leisti,351716,27140701,54,"@Jörg W Mittag: I disagree. ""Class"" and ""processor speed"" (to pick an example) are two completely different concepts, but ""class"" and ""type"" are closely related concepts. For instance, here's what [the Wikipedia article on Class](http://en.wikipedia.org/wiki/Class_%28computer_programming%29) says: ""In object-oriented programming, a class is a construct that is used to define a distinct type."" tadman was being helpful to the questioner."
+Jonik,56285,26659725,37,"[Guava](https://code.google.com/p/guava-libraries/) equivalent: `int count = CharMatcher.is('.').countIn(""a.b.c.d"");`
+...As [answered by dogbane](http://stackoverflow.com/a/3764170/56285) in a duplicate question."
+Jonik,56285,26348450,29,"@rgin: Yes, it is. But sometimes you miss the obvious solution when fixated on something else (like `array_push`). :)"
+eis,365237,26342911,26,"note that this function can also lead you very wrong. in particular, HTTP_X_FORWARDED_FOR can be anything a client chooses to set, whereas REMOTE_ADDR is considerably harder to fake, if client wants to get the actual response."
+eis,365237,26716912,13,"+1 for giving an actual solution. I have no control over 3rd party code, which is a singleton, and have a need for solutions, not advised on how it should be done."
+eis,365237,26918065,13,"in addition to Marks comments, I don't get this: ""myVar === undefined will raise an error in the situation where myVar is undeclared."" - why is this bad? Why would I *not* want to have an error if I'm referencing undeclared variables?"
+Teemu Leisti,351716,27144621,12,"@Jörg W Mittag: I continue to assert that ""class"" and ""type"" are certainly not completely different concepts in OO, as demonstrated by the quote. (Also: how do you declare a variable in Java? By giving *either* the *type* or the *class* of the variable, followed by its name: ""`int i`"" or ""`Integer j`"".) tadman answered the question in a way that seemed to satisfy both the questioner and the general audience, while clarifying the terminology Ruby uses. I have no interest in getting into academic hair-splitting over the finer points of object-oriented terminology, so please have the last word."
+eis,365237,26717742,11,"@mgaert it does, but you have to use `getDeclaredField()` instead of `getField()` for target class"
+Kayaman,2541560,26780533,10,I'd be worried about a Java developer that tests for zero with a bitwise OR.
+Esailija,995876,27007364,10,Living proof that you should insert semicolons =D
+Esailija,995876,26447385,9,This should be the minimal answer to why questions :D
+buggedcom,194480,26871307,9,"@IanWood - not really. Take for example `I <3 PHP` - if checking for html using strip_tgs like this `strlen(strip_tags($string)) !== strlen($string)`, it will incorrectly determine that it contains html, when in fact it doesn't. I'm not saying that this answer is the best way to determine if the string contains html, but it is definitely not overkill."
+Jonik,56285,26718467,9,"(Additionally, for the Ant build to work, I needed to [generate build.xml](http://stackoverflow.com/a/15718940/56285) for the appcompat project, using `/opt/android-sdk-macosx/tools/android update project -p /opt/android-sdk-macosx-r22.0.1/extras/android/support/v7/appcompat`.)"
+Esailija,995876,26735094,8,"I don't see any array, I see a method assignment to a function object"
+Esailija,995876,26633368,7,"@bobbybee to give you a practical example, [look at all these people crying and having a huge sense of entitlement](https://code.google.com/p/v8/issues/detail?id=164) when they relied on something they shouldn't have but what appeared to work just fine for a decade. Maybe they didn't know about the risks but now you do."
+Esailija,995876,26659727,6,The performance ship has pretty much sailed when using frameworks like knockout.
+Kayaman,2541560,27210502,6,"Maybe your phone is upside down. No seriously though, that can't happen. The problem is in your disp() method or somewhere else."
+Kayaman,2541560,26502866,5,Ask the interviewers. Who knows what they consider flaws.
+Esailija,995876,26735010,5,@milkshake array element? what?
+Ilmari Karonen,411022,27144419,4,"@Zanii: That's all right, it can be easily generalized to any number of allowed adjacent elements, see my answer below. (Ps. +1 to adi for inspiration.)"
+msvalkon,300791,26569414,4,"My assumption is that it's a buffering issue. Everything you write to a file is written through a buffer and will not end up in the file until that buffer is determined to be full (not entirely true, but you can think of it this way). You should really use the `with`-statement when dealing with files, which handles the `file.close`-call automatically."
+Nakedible,146423,26568843,4,"Oh, it's likely deterministic. It's exactly the same thing as when the C standard leaves something to be implementation defined behavior. The reason it is like this is that different implementors can pick different implementation choices."
+Jonik,56285,27207372,4,A good practice would be to define variables using the interface types `List` and `Set` (instead of implementation types `ArrayList` and `HashSet` as in your example).
+Hieu Nguyen,2527433,26458399,4,why don't you use: `cls.objects.filter(next_task__test__in=test_list)` ?
+Esailija,995876,26570464,4,"It is 10x faster in chrome for me, how is that barely? The differences between unoptimized and optimized code are so radical that if you didn't know about compiler optimizations, you wouldn't be able to explain the differences without sounding unauthentic."
+Esailija,995876,26633512,4,But the element is still in the html and parsed before any angular takes effect. Let's say your element name is `<cloak>` or `<shadow>` and in future it means any elements under it become shadow dom or whatever. Then angular code for that would break. Just an example.
+zvona,212878,26766821,4,"You have a mistake on your code, it's: if($(""#pause"").offset().top >=100 && $(""#pause"").offset().top < 150) { ... }"
+Esailija,995876,26652259,4,"@fusio yes, you can do something like `inherits(Mouse, Animal);` that cleans up the inheritance set up a bit. The difference is that you are creating new function identity for each instantiated object instead of sharing one function. If you have 10 mice, you have created 10 function identities (that is only because mouse has one method, if it had 10 methods, 10 mice would create 100 function identities, your server would quickly waste most of its CPU on GC :P), even though you will not use them for anything. The language doesn't have enough expressive power to optimize this away currently."
+eis,365237,26342937,3,"also, even if it is not faked, there are lots of setups where it will just be populated with clients internal network ip, which would be useless."
+Esailija,995876,26771154,3,Please give practical and rational explanation on why diff is not acceptable solution. This is like asking how to add 2 numbers to together (other than using addition operator I mean). FML.
+eis,365237,26510492,3,static imports needed are `import static org.junit.Assert.assertThat; import static org.hamcrest.CoreMatchers.containsString;` - just to save someone from trouble
+liding,616647,26530119,3,"here is the new command to run the generator,
+# rails g refinery:i18n"
+Esailija,995876,26910081,3,"@Qantas94Heavy [V8 is mostly undocumented](https://news.ycombinator.com/item?id=6237120). It is tough to refer to a single line in source for this, but basically if you follow through the [DeleteProperty function here](https://github.com/v8/v8/blob/325d5384e9caf5281866f560fcc76abf8e2ed180/src/objects.cc#L5187), you will notice it will end up calling [`NormalizeProperties`](https://github.com/v8/v8/blob/325d5384e9caf5281866f560fcc76abf8e2ed180/src/objects.cc#L4517) on the object - which means turning optimized properties into a hash table format (or not doing anything if they were so already)."
+Vincent van der Weele,2095090,26837454,3,+1 And I wasn't strong enough in Python to write the code ;-)
+Esailija,995876,26493304,3,Lol even at version 28 the only improvement they have done is to add pretty much undiscoverable tooltip that this is happening.
+Teemu Leisti,351716,26464082,3,"@Bryan: To venture a guess, you might want to do this in a banking application, when converting a currency amount that the user has input, in order to deal with only integers inside the application: for instance, converting dollars and cents to cents. This method will avoid any rounding errors that might crop up unexpectedly when dealing with floating-point numbers. When a currency amount needs to be shown to the user, the cent amount can be converted to dollars and cents. (Though that is not what the questioner asked about.)"
+Esailija,995876,26570352,3,"I already told you that my benchmark is set up in a way that enables browser optimizations for the tests. All other tests run unoptimized. Yes, in unoptimized code, elseif is faster. Who cares? Why would I care about the speed of unoptimized code? If you care, then that's fine by me but you should say that, because most people don't. Btw the reason for this is that the author of benchmark.js deliberately has code in place to try disable optimizations, not because you have to do something magical to enable optimizations."
+eis,365237,27216380,3,@Marijke so add that as an answer and accept that. That's the way to mark a question as solved.
+Esailija,995876,26540908,3,"Hackers do not need your javascript for anything, they just directly go for the server. The server **must** protect itself."
+Esailija,995876,26460898,3,"That's not a class, it most closely resembles a singleton instance which is the way one can get away without doing in OOP in OOP languages actually :D"
+Esailija,995876,26511447,3,"The closure GC problem/memory leak in V8 requires for `outsidethisscope` to reference at least another variable in its outer scope, and `users` to be referenced in at least some other inner function. The latter is required for `users` to be context allocated and the former is required for `outsidethisscope` to have a pointer to the context and thus keep it alive even when it's not necessary."
+Vincent van der Weele,2095090,26547907,3,@SwiftAppDesign check the log: `Caused by: java.lang.IllegalArgumentException: Illegal character in path at index 45: http://www.bbc.co.uk/nature/tools/search/Type text here...`
+Vincent van der Weele,2095090,26578234,3,Suppressing warnings is not gonna solve errors.
+Kayaman,2541560,26769890,3,"It's amazing that people still think synchronization is somehow slow, and go through extraordinary convoluted designs even when there is absolutely no indication that there's a bottleneck or that it would help even a little bit."
+Kayaman,2541560,26816132,3,"Try ""./conf/Config.properties"" as the path."
+Kayaman,2541560,26298692,3,"Use double quotes for Strings. Why do you have 'null', when in all the other places you've used the correct format?"
+Kayaman,2541560,26830502,3,"You probably want to use a String literal, i.e. ""Hello"" instead of Hello."
+Esailija,995876,26510394,2,"If you don't give any specifics then people will assume you are doing CRUD and give memory is cheap answers. For example there is huge relative performance cost in using AngularJS, but yet it usually doesn't matter because of the nature of the applications it is aimed at."
+Vincent van der Weele,2095090,26639678,2,"Is the leading space in `' ""+(facedWords.get(i)).trim()+""'` on purpose? It seems wrong..."
+Vincent van der Weele,2095090,26491043,2,I think [Jon Skeet's answer](http://stackoverflow.com/a/2420405/2095090) to [this question](http://stackoverflow.com/q/2420389/2095090) explains it quite well.
+Vincent van der Weele,2095090,26540447,2,"What characters do you allow in the string? Obviously, if you can have  256 options (or more), you cannot encode this in a hexadecimal string of less than 22 characters."
+Vincent van der Weele,2095090,26547622,2,Based on your edit: `IllegalArgumentException != NullPointerException`. You use an invalid URL character in `WikiID`.
+Vincent van der Weele,2095090,26832080,2,"What have you tried? A linear algorithm should be really easy to implement. (But of course, a binary search would be better.)"
+Vincent van der Weele,2095090,26639824,2,"Tnx, but just mark the other answer as accepted. It's not a competition :)"
+João Nunes,1393275,27130108,2,"great solution, must be accepted"
+Vincent van der Weele,2095090,26836589,2,"Congratulations on a nicely asked question! The problem is that the naive approach (comparing every pair against all other pairs) results in a quadratic running time. How is the distribution of your points? If they are all in a relatively small space (were small is in the order of `vertex_spacing`), this would be a difficult problem, otherwise you could do some simple optimizations (I will post them as an answer based on the distribution)."
+Kayaman,2541560,26816161,2,You want to use recursion and you have a working solution that uses recursion? I don't see the problem.
+Vincent van der Weele,2095090,27002164,2,You are really messing up concepts here. What is the `head` of a `node`? The `head` **is a** `node`.
+Esailija,995876,26549194,2,"@RocketHazmat yes, it gotos to the end of the labeled block"
+Esailija,995876,26614134,2,stackoverflow.com/questions/3423547/how-can-i-view-the-disassembly-of-optimised-jitted-net-code
+Esailija,995876,26625684,2,There is no need to quote object keys when they are valid identifiers
+eis,365237,26395785,2,"There are lot of items in repositories that only host the pom. Reason is that you can use poms to calculate dependencies, work out parent pom relationships etc. This is needed time to time even when actual .jar cannot be provided for whichever reason."
+kontur,999162,26533561,2,"The link gives a 404 not found - that is why instead of linking to potential answers, post answers here."
+Esailija,995876,26628230,2,"@akanksha1105 to see all properties in somewhat sane format, try `console.dir(array)`. If your question is about idiosyncrasies of console.log (which can do whatever random things it wants) then you should specify that --- not ask how names and indices are differentiated which is well defined issue and answered."
+Esailija,995876,26494118,2,"Indeed, the PHP implementation is only doing this gross wastes of memory because the PHP use case does not need 1 million records at the same time lol"
+Esailija,995876,26355314,2,"The second parameter is a joke, I wonder if someone actually uses that ridiculously verbose syntax to create objects in actual code"
+Esailija,995876,26875833,2,@plalx `instanceof` is defined as *Is [[rhs]].prototype in the prototype chain of [[lhs]]?* and the answer is no since the spec says that the [[prototype]] of `RegExp.prototype` is *is the standard built-in Object prototype object*
+Ilmari Karonen,411022,26605168,2,"The reason you're getting a zero result is probably because there's a bug in your code. It might help if you actually showed us that code (preferably in the form of a [short, self-contained correct example](http://sscce.org))."
+Esailija,995876,26833091,2,Any error places the xhr into DONE state which by spec means that the GC immunity of the object must be lifted. The XHR object is only immune to GC while a request is ongoing.
+Esailija,995876,26812742,2,The behavior isn't magic and is same in most mainstream languages.
+Esailija,995876,26806282,2,"@PP. do you mean ""after a very short period of time"" or ""synchronously""?"
+Esailija,995876,26785774,2,"Your ""Normal function"" function isn't normal in any sense, it references another magical property `.name`... Fixed benchmark at: http://jsperf.com/does-function-caller-affect-preformance/2"
+Esailija,995876,26784576,2,"@Joshua that only matters for superficial display. You can print a number in hex base by `privateUseCode.toString(16)`. What is stored in the variable is actual numeric value, which you can work with. The hex string can only be used for superficial display."
+Esailija,995876,26709901,2,"It's impossible, just use server side redirection like everyone else, including Google."
+Esailija,995876,26749989,2,"@Jason Well obviously private is accessible in all languages, why is that a downside?"
+eis,365237,26354948,2,"this is an old question, but just ""TYPE1"" still works."
+Henri Hietala,2541668,26946606,2,What exactly is your question?
+Esailija,995876,26491623,2,"Note that this is not what [reference](http://www.ecma-international.org/ecma-262/5.1/#sec-8.7) means, especially returning a reference means that you can use e.g. `delete` operator on it. The distinction of value/reference types as is done in Java is actually not useful in Javascript because in Javascript it is impossible to observe any difference."
+Ilmari Karonen,411022,26762750,2,@user2604484: You'll probably need to have the file names in UTF-8 too.
+Esailija,995876,26474527,2,"The loader should be hidden in the `complete` callback (fired in both error and success cases), not just success."
+Ilmari Karonen,411022,27153022,2,@Zanii: Strange. [It works for me.](http://ideone.com/zahqSa) Are you passing in the correct value of `n` (i.e. 2 for your case)?
+eis,365237,26681342,2,"original function does not modify $i: it is the value to be looked for, so you shouldn't assign to it."
+Esailija,995876,26540373,2,"This looks very complicated, what are you really trying to do?"
+Ilmari Karonen,411022,26739590,2,"@user2604484: Yes, you could use `--title=Template:Foo_bar`, but that would work only for that one file. It might be easier to just rename the files to include the `Template:` prefix. Or edit the script to prepend it."
+Ilmari Karonen,411022,26307544,2,"Also, just to make sure, you _do_ know that `action=render` is _not_ a valid `api.php` action, but should instead be passed as [a parameter to `index.php`](http://www.mediawiki.org/wiki/Manual:Actions), right? (Yes, it's kind of confusing that both of those scripts take a parameter with the same name and a similar purpose, but different allowed values.)"
+Esailija,995876,26469947,2,because the test is incorrect... the teardown is performed between samples not calls/iterations so the while code is not doing anything. The entire jsperf is set up in a way to make you do incorrect benchmarks anyway... starting with the fact that it does deliberate attempts to negate engine optimizations which one needs to avoid with unintuitive script tags and global functions as tests
+Esailija,995876,26512113,2,Ok if you are still disagreeing me please check out these jsfiddles. http://jsfiddle.net/x7keR/2/ (no GC problem in chrome) http://jsfiddle.net/x7keR/3/ (still no GC problem in chrome) http://jsfiddle.net/x7keR/4/ ( have a problem ). To see it press collect garbage in developer tools and see that only /4 doesn't reclaim memory
+eis,365237,26451086,2,@EikePierstorff that'd be an answer
+eis,365237,26679440,2,"it's supposed to be of type Field, not ""MyField""... you should use more correct data for the example code"
+eis,365237,26655047,2,so what is the actual problem? what's the error message? can you show the jsfiddle demonstrating it?
+Kayaman,2541560,26507586,2,"Yes, it's on the AccountDanger object (implicitly because the method has the synchronized keyword)."
+Esailija,995876,26536316,2,[Flags registers - Can we read or write them directly?](http://stackoverflow.com/q/1406783/995876)
+eis,365237,26652370,2,It is worth a mention that Servlet 3.0 was released back in december 2009. The question and the current accepted answer answer predate those.
+Ilmari Karonen,411022,26720180,2,"@user2604484: That might well be the case. Using a better file transfer protocol (e.g. SFTP instead of FTP) might help, but the simplest solution is probably to put all your files in a single .zip archive (""compressed folder"" in Windows speak) and upload that. You can uncompress it on the server with the `unzip` command."
+Esailija,995876,26533271,2,What is an empty tr actually.. does it have empty td elements or no children at all?
+Ilmari Karonen,411022,26889591,2,"Yes, but `auxi[i-j]` may be (and typically is) less than `i`. (I think that's probably a bug, and it should be `auxi[i+j]` since you're looping backwards from `top` to `0`, but even if you fix that, you'll still be referencing uninitialized elements whenever there's a snake.)"
+eis,365237,26460645,2,"it's the fastest option only if hashcodes of objects are sensible. Having hashcode return 0 for all objects fullfills the contract, but would make hash-based collections perform horribly. Just overriding hashcode with something that blindly obeys the contract will not help."
+Ilmari Karonen,411022,26698541,2,"That's a _really_ slow upload speed. Are you using an old modem from the 90's? As for importing the files into MediaWiki, certainly it should be faster to upload the files onto the server (perhaps in a .zip / .tar.gz archive to make it faster) and use importTextFile.php (or edit.php, which should be equally fast) than to use a bot. I suppose modifying the script to import all the files in one invocation would be even faster, but probably not enough to make up for the time it would take to make the changes and test them."
+Hieu Nguyen,2527433,26890163,2,You can follow one of my answers here: http://stackoverflow.com/questions/17751163/django-display-time-it-took-to-load-a-page-on-every-page/17777539#17777539
+Ilmari Karonen,411022,26307337,2,"You may be able to get around the cross-domain issues using [JSONP](http://en.wikipedia.org/wiki/JSONP), which the MediaWiki API [supports](http://www.mediawiki.org/wiki/API:Cross-site_requests) via the `callback` parameter. As for `action=parse`, you still need to [specify the format you want](http://www.mediawiki.org/wiki/API:Cross-site_requests), e.g. with `format=json`."
+Esailija,995876,26505112,1,@Ian that is not even the most common way of creating elements.. `.innerHTML` is. See my first comment.
+Esailija,995876,26632724,1,Isn't this throttling? I think debounce means to keep moving the timeout as long as calls are coming in under certain amount of milliseconds and only make one call finally when things settle down. Maybe I have them other way around...
+Esailija,995876,26632792,1,Ok it seems it's not throttling and not debouncing either.. according to this explanation http://drupalmotion.com/article/debounce-and-throttle-visual-explanation :P or maybe it's throttling... argh but it's definitely not debouncing
+Esailija,995876,26632904,1,@davnicwil it will help also to determine what your application does because debouncing might be more appropriate. For example I have never needed throttling in js... let's say you send ajax request with each keypress. Then throttling will waste requests while the user is still typing.
+Esailija,995876,26542944,1,Then you are operating on blind faith
+Hieu Nguyen,2527433,26543106,1,"ah right, I didn't notice you use different params for `source` callback. Normally I would use `source: function (query, process) {`. And yes it is handle the response of the AJAX call."
+Esailija,995876,26630895,1,"Whitespace or comment will fit this bill, filling the code with function declarations is probably the worst you could do with regards to your goal."
+Esailija,995876,26652007,1,"@AwakeZoldiek What do you mean by it is not a ""native feature""?"
+Hieu Nguyen,2527433,26497469,1,"It's just I'm not sure about the result query of them so it could be either, anyway use `query.__str__()` to check the query you need. Also check my answer carefully, you should use `values('datetime')` only"
+Hieu Nguyen,2527433,26469143,1,`remote` is what you need. Check the last 2 examples
+Esailija,995876,26695965,1,@CrazyTrain done :P
+Esailija,995876,26505048,1,"That is impossible in general, and any practical solution for some sub cases would be a lot of work."
+Esailija,995876,26707711,1,"The way it should be thought about is that `set_attr` is a normal function with extra hidden parameter for the `$this`, and `$sc1->get_attr()` then effectively calls that function `get_attr($sc1)`. There is no need to create separate scopes or any copies or even think of it as something different from normal function."
+jku,2241569,27072726,1,It's good you got your problem resolved but this solution is unlikely to be correct. Desktop files are not executed so should not require to be marked executable. Take a look in /usr/share/applications: none of the desktop files are marked executable.
+Esailija,995876,26709589,1,"@jack yes the `elem.click()` will not be considered to originate from user action even if the actual event happened to, I think that is irrelevant  here since the intention is to just follow the link which works fine."
+Esailija,995876,26727682,1,"At least use hasOwnProperty, `__lookupGetter__` or `__proto__` is a common name for sports"
+Esailija,995876,26728139,1,I just run my hash table benchmark and I got  6 million times per second for hasOwnProperty .http://jsfiddle.net/JT3W5/
+Hieu Nguyen,2527433,26521294,1,"I believe the url (in AJAX) should be: `url: '/livestream/postdata/',` (notice that first `/`?)"
+Esailija,995876,26621907,1,"This is called a ""carousel"". [Slider means something different](http://en.wikipedia.org/wiki/Slider_\(computing\))"
+Esailija,995876,26630109,1,"So `/^((https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])$/`?"
+Hieu Nguyen,2527433,26743688,1,why don't you use normal Django test client? https://docs.djangoproject.com/en/dev/topics/testing/overview/#testing-tools
+Esailija,995876,26543259,1,"@sje397 What does that have to do with anything? You *completely* missed my point. Are you those people who say ""the compiler will optimize it"" and never even look at assembly - and if they did, they find out that it wasn't in fact optimized like you expected."
+Esailija,995876,26549884,1,The advice about mixing types wasn't related to your immediate problem but a general advice
+Esailija,995876,26540735,1,"@NeoWang Those that use bugs in plugins like Flash. You cannot forge the header in a normal CSRF situation, so it's fine without bugs. You might consider that always just sending and checking token is much simpler than sometimes checking token and sometimes checking header."
+Esailija,995876,26492284,1,"A property assignment fails when `data` is a primitive, sealed, inextensible, or a frozen object when the property doesn't already exist or if the property exists then the assignment will fail when the property is not writable or the object is frozen. Then on the second line, you try to retrieve `data[i]`, but if the property assignment failed, then that will not be what you wanted. But in the first example, the assignment to the  variable always works even if the property assignment fails. So that's why they are not equivalent."
+Esailija,995876,26553216,1,"If you are asking if it's possible to write a language in invalid syntax, then the answer is obviously no. If you are not asking that, what are you asking?"
+Esailija,995876,26553475,1,Btw this seems like a huge [XY problem](http://mywiki.wooledge.org/XyProblem)
+Esailija,995876,26555448,1,"Not much better than the loop if the loop is allowed to be ""fake""-one lined too :P `for(var i = 0; i < array.length ) delete array[i].bad`"
+Hieu Nguyen,2527433,27021637,1,"So `gul` is a type now? You can change your url pattern to `url(r'^(?P<type>\w+)/(?P<page>\d+)$', 'site1.views.type')` then"
+Esailija,995876,26555659,1,"Neither of them expresses ""delete bad property of all objects in this array"" in radically different way. `forEach` is generic and semantically meaningless by itself, like a `for` loop."
+Kayaman,2541560,27179556,1,"Also go by the name of ""jagged arrays""."
+Hieu Nguyen,2527433,26621290,1,possible duplicate of [CSS issue on Twitter Typeahead with Bootstrap 3](http://stackoverflow.com/questions/18059161/css-issue-on-twitter-typeahead-with-bootstrap-3)
+Esailija,995876,26629779,1,@DavidKrmpotic localStorage saves the data on disk so it only supports strings. Sure it could do JSON behind the scenes but that would make it much slower when JSON is not needed.
+Hieu Nguyen,2527433,26596153,1,Just read this guide then: https://docs.djangoproject.com/en/dev/ref/contrib/csrf/
+Hieu Nguyen,2527433,26595490,1,+1 for using `redirect` instead of `HttpResponseRedirect`. Of course OP can try to do `return redirect('/')` to go back to `http://127.0.0.1:8000/`
+Esailija,995876,26608588,1,That would have not been simple even if it worked in IE6-8 since 2 different events can easily have same timestamp.
+Esailija,995876,26611061,1,"@LoneLearner you could prefix them with `_` to communicate internal field, no need to fight against the language"
+Esailija,995876,26540247,1,"You should just use `Map<Integer, Integer> lbs`."
+Esailija,995876,26611784,1,"@arachide you have seriously misunderstood. Using closures does not mean you waste memory. The reason defining functions in a constructor wastes memory is because you define functions in a constructor, not because of any closure. You can even define non-closures in a constructor and the memory waste will be the same. Sigh. Defining functions in a constructor is the problem, not closures. Functions have observable identity and are for example in V8 extremely fat objects, that's why it takes a lot of memory to hold tons of wasted fat identities around that point to same code."
+Esailija,995876,26614961,1,Well generally it doesn't make sense to write code in the compiler to do optimizations that are not useful to anyone in a real situation.
+Esailija,995876,26620613,1,"[It's possible to make an `.each` implementation that performs the same as a for loop](http://jsperf.com/for-foreach-jqeach) (at least in V8 and SpiderMonkey due to implementing inlining optimization). jQuery `$.each` however performs like a dog, avoid when performance is a concern."
+Esailija,995876,26623885,1,The general execution direction is linearly from top-to-bottom. So you try to access the getter before it has been defined.
+Esailija,995876,26540072,1,There is no value
+Esailija,995876,26492461,1,Here's an example that uses frozen object to produce different result http://jsfiddle.net/zgdKB/
+Timo Westkämper,252552,26355426,1,"no, like (map :TABLE_NAME ..."
+Esailija,995876,26735345,1,lol this couldn't be idiomatic prototype.
+eis,365237,26490934,1,Just making a note here that StringWriter approach indeed works. Thank you!
+Vincent van der Weele,2095090,26762345,1,"Impressive question decrypting! Still, for this to work `onOrOff` must be public in `LightPost`."
+Kayaman,2541560,26818310,1,You're right. Those bastards.
+Vincent van der Weele,2095090,26778352,1,To all editors: please be careful to not introduce more errors than your predecessor fixed...
+Vincent van der Weele,2095090,26847592,1,"I think everyone on the other question agreed that there are only 3 objects created, so what's the point of this follow-up? Maybe I miss the essence of your question, but it feels like you're asking exactly the same."
+Vincent van der Weele,2095090,26850699,1,"I had no clue that the OP meant this, but reading your answer, it makes a lot of sense! +1 Btw, it's quite useless to drag `Results.maxLength` all around your tree, while you're only interested in the maximum of left and right on the root."
+Vincent van der Weele,2095090,26945439,1,let us [continue this discussion in chat](http://chat.stackoverflow.com/rooms/35904/discussion-between-heuster-and-pingboo23)
+Vincent van der Weele,2095090,27119146,1,"Either I don't understand the question, or you just reverted the (correct) edits of @SlaterTyranus. The question in its current form is self-contradictory and makes absolutely no sense."
+buggedcom,194480,26871390,1,"This causes false flags. Take the string for example `I <3 PHP`. This function would determine that tags do exist, when they don't."
+Kayaman,2541560,26806720,1,"Well if the database string is ""online"" and you ask for ""Online"", it sure as heck won't return anything."
+Kayaman,2541560,26804859,1,Many websites provide RSS feeds that do exactly what you want. And Android has plenty of RSS readers.
+eis,365237,26393950,1,don't really understand the problem here. why can't you just put a new value into char or string variable if you want to change it?
+eis,365237,26459179,1,"This question should be reopened, as now with edits it should be clear what is being asked."
+eis,365237,26652519,1,note that this provides no extra security in comparison to current situation. The parameters still need to be checked to have any kind of security.
+Kayaman,2541560,26819027,1,What's your batch size?
+Kayaman,2541560,26764977,1,"@iluvthee07 Operator overloading is just syntactic sugar. It was left out of Java, because the advantages were considered to be less than the possibilities of confusion."
+Kayaman,2541560,26505248,1,"@SteveP. True. I'm a recent refugee from the Sun/Oracle forums, and there was very little one could do to handle the messages, so I'm still learning the ropes."
+eis,365237,26728037,1,I don't think you meant that for two identical values there would be different output?
+eis,365237,26863794,1,"@ruakh I don't see that mentioned explicitly in the question, at least not in the way that it would deserve a downvote, but maybe that's just me :P"
+eis,365237,26978383,1,"@DrizztDuOrden the code you have is fine. There are beginners instructions at http://www.freejavaguide.com/corejava1.htm - all you need to do is to [download and install a JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html), [put it in the PATH](http://docs.oracle.com/javase/tutorial/essential/environment/paths.html) and you're good to go."
+eis,365237,27144452,1,"@Spudley because they don't know any better. And how would they, since [manual page](http://fi1.php.net/manual/en/function.mail.php) says nothing about the fact that it is crap and should really be deprecated."
+sampoh,2181499,26415880,1,Ding ding ding! I guess this is new on jQuery UI as no `autoHeight` or `clearStyle` was mentioned in the [API](http://api.jqueryui.com/accordion/).
+robguinness,896660,26982664,1,"Can someone provide pointers as to where the tradeoff might be for common hardware and data scenarios? I know I should do benchmarks for my specific case, but if I'm just starting out and/or don't have time to run extensive benchmark, what are some reasonable inflection points for typical scenarios?"
+Jonik,56285,26519941,1,That's pretty neat!
+Timo Westkämper,252552,26982399,1,"Ok, then this might be a bug as well. Feel free to file a ticket for it."
+Jonik,56285,26690877,1,"Hmm, for me, `{sdkpath}/extras/android` contains only `support` and `m2repository` subdirectories. (And `{sdkpath}/extras/android/support/v7/appcompat` seems to be exactly what I need.) If I'm missing some part of the SDK, how exactly should I install it? I'm also using Android SDK Tools 22.0.5."
+Timo Westkämper,252552,26497909,1,I'd also suggest to put the conditional execution of the plugin into a profile.
+Kayaman,2541560,26818346,1,"Well if you'll be returning that map from a method, then the interface-preferring rule still applies."
+Vincent van der Weele,2095090,26496138,1,This question is not very well suited for SO. Have a look at [What types of questions should I avoid asking?](http://stackoverflow.com/help/dont-ask).
+Kayaman,2541560,27167027,1,"As for implementing a protocol, you're free to do as you please. Although maybe you should Google around for some more information, as you seem to be quite lost and this question is too broad for here."
+Kayaman,2541560,27152270,1,"Eh? The cache is the ""private volatile int hashCode"". When the hash is calculated, it's saved to the cache. Initially the value is 0 as are all non-local numerical variables."
+Esailija,995876,26778018,1,"@Ian agree, this is begging for second-order XSS.. I must punish with a downvote"
+Esailija,995876,26778364,1,"Question is invalidated by the fact that strict mode doesn't forbid eval, it just disables the dynamic scoping of eval"
+Esailija,995876,26784448,1,Definition for [property](http://www.ecma-international.org/ecma-262/5.1/#sec-4.3.26) and [variable](http://www.ecma-international.org/ecma-262/5.1/#sec-12.2). Please don't confuse the two.
+Esailija,995876,26784622,1,What do you need it for? I am asking cos it's kinda strange to want the code point in a hex string.
+Esailija,995876,26787575,1,This is pretty impressive thinking that should be the norm but isn't
+Esailija,995876,26799936,1,@Gopal here are multiple examples that show difference between variables and properties http://jsfiddle.net/VjZnn/
+Esailija,995876,26806052,1,"In Java `private` doesn't prevent access either because you can access it through reflection. So in Java you were already relying on developers not wanting to access it. Btw, the pattern uses `variables` which don't play along with the language's object model. Here are a few examples http://jsfiddle.net/VjZnn/"
+Esailija,995876,26806531,1,The convention everywhere used is underscore prefixing e.g. `this._age` or `this._method()`. The underscores are very visible because they are not naturally used everywhere else other than `CONSTANT_NAMING`.
+Esailija,995876,26811723,1,Node.js uses V8 which does not interpret at any point :P
+Esailija,995876,26814351,1,The subtype and supertype share the same prototype object so placing methods into one affects the other. Who wants that?
+Esailija,995876,26836855,1,"@BenjaminGruenbaum the spec that was linked right above? :P See here in the error case, step 4 is changing the state to DONE. http://www.w3.org/TR/XMLHttpRequest/#infrastructure-for-the-send()-method"
+Esailija,995876,26847704,1,"@BenjaminGruenbaum I refer to practice with the slide. Still nothing to do with synchronous xhr, since you would just as likely not call abort in readyState DONE as you would when using sync xhr. The IE bugs are old and not specific to synchronous."
+Esailija,995876,26933301,1,@sabithpocker yes ember has already even fixed it... should have made an issue of it since they seem to care about it
+Vincent van der Weele,2095090,26649206,1,"I didn't even need to read the code to realize it was the good old `==` vs. `equals`. Wish the process could be automated, something like `if (rep == 1 && tags.contains(""java"")) ask(""Did you compare strings with ==?"");`"
+Esailija,995876,26993079,1,"*You can easily cause this using setTimeout to delete the request object after the request has been made but before it returns.* This is the same mistake as in other answer, if you make a timeout, the timeout will not be handled until after the sync request has already been resolved. The spec is written in a way that if your request is synchronous, then everything is frozen when the object is in the immune-to-GC state."
+Kayaman,2541560,26831306,1,And where does the NullPointer occur? Show the stacktrace (and mark the line).
+Esailija,995876,27139853,1,"It is actually impossible, well `window.stop` but that's not exactly ideal. Removing the src attribute has no effect as some people mistakenly believe."
+Esailija,995876,27185364,1,Well what is the difference between `var a = new Animal(type)` vs `var a = CreateAnimal(type)` ? Both are just as convenient and put property assignments where they belong. However the code is still a bit ugly on the declaration site where you must explicitly create and return an object - when using normal constructors the creation and return statement are implicit -> that's why you only type `this.type = xxx` inside normal constructor but need the return statement and object.create inside the factory.
+João Nunes,1393275,26652581,1,good one.This is correct! the previous answer is wrong.
+Vincent van der Weele,2095090,26455054,1,"@downvoter care to explain? OP asks why only 2 and 3 are printed. Well, exactly for this reason."
+Vincent van der Weele,2095090,26461168,1,"I would expect that it uses some assembly language (at least my TI did years ago), or some ugly variant of Basic. Both are not pretty nice to work with."
+Vincent van der Weele,2095090,26506276,1,"@photosynthesis I started too, but it is not trivial. I'll try to update the answer if I have a correct explanation."
+Vincent van der Weele,2095090,26509073,1,@photosynthesis added the math :)
+Vincent van der Weele,2095090,26503015,1,"I'm quite sure this is not the original code (since it has a parsing problem with your closing brackets), so how do we know you didn't make an other mistake indeed?"
+Vincent van der Weele,2095090,26521225,1,"@Rohit oops, missed that line :) just saw it one second before your comment"
+Esailija,995876,26499543,1,"The concatenation operator is `+`, not `.`"
+Esailija,995876,26873314,1,"@sabithpocker 1000 for lifetime of the application is not that much even if they take 0.5kb each. This stuff does matter though when you create something like e.g. 60000 objects every second (a particle explosion effect in a game for instance, the more objects, the cooler it will look :P). Yes, if a blank ember object gets GCd, you get back 524 bytes."
+Esailija,995876,27024898,1,"Still, if you are only saying objects will be moved into old space because of this, then it is not a leak. In Chrome before november 2012, dom objects were like this: [*All (non-independent) DOM objects are promoted to the old space and then reclaimed by the major GC.*](https://docs.google.com/document/d/1OMG0fXB3DDvBaQ2YgxWLzzKjn9nWp8y_oTdQqFkBWhw/edit?pli=1)"
+Esailija,995876,26396021,1,"@MattiMehtonen but that's not a fair test since you can easily move the constructor out of run-time code by making it statically and using prototype from `document.createEvent(""MouseEvents"")`. Example http://jsfiddle.net/mtjhm/"
+Esailija,995876,26412880,1,Both SpiderMonkey (Firefox) and V8 (Chrome) also provide the extension `Math.imul` because even `((x|0)*(y|0))|0)` is not enough to provide integer semantics. The fact that integers are used is leaking pretty hard.
+Luís Ramalho,848250,26378374,1,"Try `.order(""users.created_at DESC"")`"
+Esailija,995876,26364087,1,What is your question? Are you not sure about the syntax?
+Esailija,995876,26399502,1,@webnesto there's never any performance from syntax when the semantics of the syntax are the same. One will not execute code right away but first parse it and do semantic analysis - this is where both of the declaration styles are equalized.
+Martaver,535930,26759369,1,"Thanks for the link :) From the article, Web API defaults to reading a simple type from the URI, or a complex type from the body (or both at the same time). You can force Web API to read a simple type from the body, instead of the URI with [FromBody], but the request stream is only read once, and the reader can't go back to read other simple parameters.  Seems like an implementation issue, more than anything.
+
+Ended up making a Model and ModelBinder for my values!"
+Ilmari Karonen,411022,26608317,1,"Yeah, `killall perl` ought to do it."
+Esailija,995876,26474625,1,"Btw, the promise equivalent of `complete` is `.always()`"
+Ilmari Karonen,411022,27138307,1,"@Joe: This question isn't really a very good fit for crypto.SE, although admittedly the way it's asked here makes it a bit hard to tell: ""How do cryptographic PRNGs work?"" would be a good question for crypto.SE (except maybe a bit too broad); ""How does the OpenSSL PRNG work?"" would be marginally on topic, while ""How do I use the OpenSSL PRNG?"" would be off topic for crypto. This question as asked here looks sort of like the second type, but [the real question](http://crypto.stackexchange.com/q/9983) behind it is closer to the last one."
+Esailija,995876,26459115,1,"Saying there isn't noticeable performance difference implies that there is a difference. If there is a difference that is only because the register allocation heuristics are tickled in a particular way which is something that you cannot control reliably anyway. What I am saying is that even if one needed micro perf, it would be a waste of time to move variable declarations around. It would be even more waste of time to run benchmarks on those changes."
+Esailija,995876,26453545,1,@Spokey you might as well had thrown a coin... that benchmark is completely irrelevant to everything here. First because JSPerf only tests runtime performance and second your tests use extremely slow `.html` operation which will shadow any other operation.
+Esailija,995876,26330227,1,look at the `view-source:` of the page and see what code is generated
+Teemu Leisti,351716,27134654,1,@botbot: now fixed.
+Ilmari Karonen,411022,26403084,1,"Alternatively, `preg_replace('/(^|\.)0/', '$1', $date)` or even `preg_replace('/\b0/', '', $date)` avoids the need for look-behind."
+Ilmari Karonen,411022,26403184,1,"No problem. Also, if you need to remove more than one leading zero, just stick a `+` after the `0`. You could even use `preg_replace('/\b0+\B/', '', $date)` to strip all leading zeros from all numbers, except for the last zero in `0000`."
+Esailija,995876,26456207,1,LOL I don't know C++ at all so I had to take the OP's word for it... lmao
+Esailija,995876,26291256,1,"`()` is operator to call whatever is on the left as function. Try `null()`. Get it? `+` is operator to sum whatever is on the left and right, but then, what is `5 + 5 + 5`. Well, `( 5 + 5 ) + 5`. In the same way `whatever()()` is `( whatever() ) ()` e.g. call `whatever`  as function, and then call the result of that as a function..."
+Esailija,995876,26325263,1,@RakeshJuyal well it can be made a lot shorter by removing whitespace and merging the events but that  doesn't mean it will be more readable or better :P
+zvona,212878,27212785,1,"You would get all of the elements in nodeList with: document.querySelectorAll(""#myId""); . But like n+1 comments - you're supposed to use classes instead of ids."
+Esailija,995876,26304008,1,@Stilltorik no because both are native.. Host objects are objects provided by the Javascript host. Like a browser provides document.getElementById and so on but it would be impossible to have that in the language itself since language should  not be tied to browser.
+Esailija,995876,26307606,1,"*I've never seen an actual interpreter which doesn't execute this code properly.* That's what people said about ordered props for a decade, then V8 came and exploited the fact in the spec that props don't have to be ordered to gain performance boosts. Then other browsers of course followed and there was [a huge amount of people asking for ordered properties again](https://code.google.com/p/v8/issues/detail?id=164). Those developers were thinking like you: ""since it works this way in everything I tried, it must be this way"". But actually it is just a coincidence and history could repeat itself."
+Esailija,995876,26447585,1,http://en.wikipedia.org/wiki/Law_of_Demeter
+Esailija,995876,26308014,1,In this particular case though it seems that it will be specified in ES6... just saying though that if that wasn't the case then this attitude can be harmful :p
+Esailija,995876,26398057,1,"@MattiMehtonen You kept accumulating eventlisteners on the dom without clearing them up in-between. You could consider that test2 started with 100000 eventlisteners already added in the dom, thus adding new ones kept getting slower and slower. Test1 started with 0 so it was fastest."
+Esailija,995876,26398134,1,@MattiMehtonen here's proper jsperf test case http://jsperf.com/event-object/3. I should add the lazy one there (the one in jsfiddle) because it will surely be the fastest
+Esailija,995876,26395939,1,Or it could not set anything at all D
+Esailija,995876,26351813,1,"Even in static language you can have dynamic dependencies, and eval in this sense is just as bad as reflection. `what functions does a code call`, sounds to me like `does this code call function x`, which sounds like `does this program ever halt` ;P ?"
+alcedine,1492838,26627799,1,Should `json_response = response.json()` be `json_response = response.json`? Your error string implies that you're trying to call a dictionary as if it was a function.
+Esailija,995876,26397363,1,@T.J.Crowder ...per day
+Esailija,995876,26378086,1,"The inheritance of read-only is per spec, you need to use `defineProperty` if you want to ignore possible getters, setters and read-only for same named property in the prototype."
+Vilsepi,1571302,26413546,1,"I am unable to try this right now, but I believe that you are supposed to create a key structure Software\Policies\Chromium\VideoCaptureAllowedUrls and inside that ""folder"", you create a new string value with the name ""1"" and value ""http://domain.to.allow.com""."
+Esailija,995876,26471871,1,"The method is `.attr( ""checked"", ""checked"" )` but it's not what you want anyway, because the attribute `""checked""` refers to `.defaultChecked` property and you want to change `.checked`. Changing `.defaultChecked` property or `""checked""` attribute will only have effect if the user has not touched the checkbox yet."
+Esailija,995876,26406374,1,"@vsync first result on google for ""signed cookie"" `req.signedCookies['name']`"
+Esailija,995876,26455497,1,"Also, one cannot observe that this is not true for primitives as well because you cannot attach or modify properties of primitives in the first place."
+Esailija,995876,26406273,1,@MuhammadUmer let me try to explain it in my answer
+Timo Westkämper,252552,26328610,0,"Looks nice, but you can use :TABLE_NAME as the first argument of the first map call"
+Timo Westkämper,252552,26495793,0,"Then file a bug http://wiki.eclipse.org/EclipseLink/Bugs Though this might also be something that isn't covered in the JPA specs, and EclipseLink is just stricter"
+Ilmari Karonen,411022,26533895,0,See edit above.
+Timo Westkämper,252552,26302477,0,Please provide the stacktrace. SQLQuery and JPASQLQuery should work. JPAQuery is for JPA queries (ORM queries).
+Jawa,50939,26578400,0,"Note that link-only answers are discouraged. Please consider adding a synopsis of the referenced article to your answer, keeping the link as a reference."
+Jawa,50939,26747690,0,"Notepad++, latest version of Chrome?"
+Jonik,56285,27176895,0,"Hmm, interesting. I think it's true that [""the `volatile` keyword in Java is poorly documented, poorly understood, and rarely used""](http://www.javamex.com/tutorials/synchronization_volatile.shtml).
+Anyway, [looks like](http://stackoverflow.com/a/7943472/56285) `volatile` is not completely equivalent to making the accessors to the field `synchronized`."
+Ilmari Karonen,411022,26852434,0,"You might want to try setting [`$wgNonincludableNamespaces`](http://www.mediawiki.org/wiki/Manual:$wgNonincludableNamespaces), although I'm not sure if [LST](http://www.mediawiki.org/wiki/Labeled_Section_Transclusion) respects it or not. If not, that's arguably a bug in the extension."
+Ilmari Karonen,411022,26779558,0,"This question asks about general security (and/or user interface design) practices rather than about a specific programming problem, and is therefore off-topic for Stack Overflow. You should ask it at the [IT Security Stack Exchange](http://security.stackexchange.com) (or possibly [User Experience Stack Exchange](http://ux.stackexchange.com)) instead."
+Jonik,56285,26659585,0,Same as http://stackoverflow.com/questions/275944/how-do-i-count-the-number-of-occurrences-of-a-char-in-a-string
+Jonik,56285,27102991,0,"(Well, ended up using   `date_default_timezone_set(ServerConfig::DEFAULT_TIMEZONE)` to set approriate timezone, so now this solution works for me too. +1.)"
+Timo Westkämper,252552,26808053,0,"You need to give it an alias to be able to refer to it: leftJoin(property, alias).fetch()"
+Ilmari Karonen,411022,26729251,0,"Ps. If you need to store such values on the client side (e.g. in cookies), include a [MAC](http://en.wikipedia.org/wiki/Message_authentication_code) with them to protect them from tampering. Don't forget to include the username in the MAC input."
+Jonik,56285,26690733,0,"@Rajesh: Yes, I do. And more specifically `/opt/android-sdk-macosx/extras/android/support/v7/appcompat/` seems to be installed just fine."
+Jonik,56285,27102507,0,"How to do the same thing, but specifiying the timezone (not using server default)?"
+Ilmari Karonen,411022,26729205,0,"If you want to be able to invalidate _all_ sessions (or all but one session) for a given user, which I agree is a useful feature, one way to do that would be to store a ""last logged in"" timestamp in the session and a ""last logged _out_"" timestamp in the user database. Then just check on each request that the timestamp in the session is later than the one in the database. To force the user to log out, just update the timestamp in the database (and optionally the one in any sessions you want to keep)."
+Timo Westkämper,252552,26302523,0,Also provide the query source code.
+Timo Westkämper,252552,26489984,0,This looks like a EclipseLink bug.
+Timo Westkämper,252552,27206321,0,Some others have encountered this error when the classpath dependencies are not consistent. Do you have a working build without the APT generation?
+hungneox,237107,26940958,0,thank you so much :D
+Jonik,56285,26691715,0,"Yeah, [according to Android SDK Manager](http://i.stack.imgur.com/adUuX.png) I do have Android Support Library, rev 18 installed."
+Ilmari Karonen,411022,26594996,0,"What platform and compiler did you observe this on?  I tried to [reproduce it on ideone](http://ideone.com/ENTban), but apparently their implementation of `pow()` returns exact results for positive integer powers of 10."
+Timo Westkämper,252552,26418643,0,"Querydsl doesn't support Solr, but you could ask in the Querydsl Google Group if other users have similar needs, then the development of Querydsl Solr could be considered https://groups.google.com/forum/#!forum/querydsl"
+Timo Westkämper,252552,26319881,0,"From-less queries are now allowed also on the JPA side, they work already for SQLQuery https://github.com/mysema/querydsl/issues/467"
+Jonik,56285,26718454,0,"Ah, indeed. I got it working with `android.library.reference.1=../../../../../../../opt/android-sdk-macosx/extras/android/support/v7/appcompat`
+This also works in `local.properties`, which I think is a better place since the same path won't work for all developers."
+Ilmari Karonen,411022,26728609,0,"Your question might be better suited for our sister site, http://security.stackexchange.com/, as it's more about general web application security practices than about a specific programming problem. However, FWIW, I've provided my answer below."
+Ilmari Karonen,411022,26691437,0,"@user2604484: That's still only three transclusions. Three is hardly ""numerous"". Now, what _could_ affect loading speed is if you had, say, a page like `{{A|1}} {{A|2}} {{A|3}}` and so on up to, say `{{A|100}}`, and then Template:A contained `{{B|1}} {{B|2}} {{B|3}}` and so on (and maybe Template:B contained `{{C|1}} {{C|2}} {{C|3}}` etc.). In that case, MediaWiki would have to parse Template:A 100 times, template B 100 * 100 = 10000 times, etc."
+robguinness,896660,26646974,0,"Ok, thanks. Does anyone care to add to this answer some example code using posix libs or standard C library that would help someone like me to get started? Also, I'd be very interested to hear from someone with experience doing something similar on Android (although Android is based on Linux, there can sometimes be difficulties porting Linux libraries to Android)...."
+lari,811830,26450997,0,"Thanks for a really detailed answer! This helped me solve my problem, which, however, was a bit different from the original question."
+Kayaman,2541560,26505074,0,@jacen.garriss Because this is an extremely simple question. Did you even read the javadoc for SimpleDateFormat?
+Kayaman,2541560,26507293,0,"@jacen.garriss If you never understand the javadoc, how will you ever become a programmer? And there are people with real problems who would deserve help, not lazy people who can't be bothered to use their own brains."
+Ilmari Karonen,411022,26311769,0,[A short self-contained correct example](http://sscce.org) program demonstrating the problem would be nice.
+Kayaman,2541560,26507765,0,"No. It means that other threads can't access other synchronized methods. Non-synchronized methods can be accessed, since they're not being guarded by an object monitor."
+Kayaman,2541560,26502656,0,Is your Class a CDI bean?
+miq,403053,26365508,0,"I'm actually using the ResourceBundle and all the missing entries end up in a log file. BUT. It only works run-time. I would have to do everything possible in the software and trigger all possible errors, which is a no-go."
+Kayaman,2541560,26503433,0,"@arshajii Fair enough, let's call it ""constant sized list""."
+Kayaman,2541560,26503764,0,"Do you have multiple JREs installed? It really is that simple to install the JCE, so make sure to double check all ""simple"" mistakes first."
+Mridang Agarwalla,304151,26900507,0,http://developer.android.com/reference/com/google/android/gms/gcm/GoogleCloudMessaging.html
+Kayaman,2541560,26464912,0,"And did you notice that you have ""TABLE"" in the first code and ""TABLES"" in the second one?"
+Kayaman,2541560,26734291,0,"I've yet to see a valid reason for jar file obfuscation in my 15 years of Java programming. If the code is bad (as it often is), nobody will want it. If the code is good, obfuscation won't help."
+Mridang Agarwalla,304151,26872883,0,Doesn't the code that you posted apply to the older GCM library and not in the new `GoogleCloudMessaging` library?
+Kayaman,2541560,26766818,0,"I wouldn't call this ugly. It certainly has a lot of braces and it looks a bit repetitive, but at least it's clear what it does. Often I see people so afraid of a bit of repetition in their code, that they start to write really convoluted solutions that aren't easy on the eyes at all. Sometimes it's best to write code the ""dumb way""."
+Mridang Agarwalla,304151,26797639,0,"@SunilMishra, I checked my code and there aren't any calls to the `unregister` method. Although I agree that `register` method should only be invoked once, shouldn't the method's functionality be compliant with the documentation? Thanks."
+Kayaman,2541560,26774652,0,Is this the actual real code your compiling and running?
+Kayaman,2541560,26778484,0,"This is in the Javabean specification, so I would use it even if it wasn't needed, since other libraries besides Hibernate would expect it to be according to standards."
+Kayaman,2541560,26779509,0,"Yeah, go through the preferences, there's a place where you can write your own autocomplete stuff."
+Kayaman,2541560,26467236,0,"It wasn't exactly clear, but I've had years of experience deciphering questions on the Sun/Oracle forums."
+Kayaman,2541560,26343264,0,"@AbdulGamoranao Yes, like Stephen C suggested, initialize them all at once. As in for(int i = 0;i < p1.length;i++) p1[i] = new slumbook_gamoranao();"
+lari,811830,26460896,0,"Renato: Give the segue a name and call `[self performSegueWithIdentifier:@""yourSegueName"" sender:self];` in the button's target action."
+colymba,1979553,26357923,0,Can you post the full code for DebatePage.php and Panelist.php either here or better as a Gist. Might be able to test and help better?
+robguinness,896660,26325474,0,Is anyone aware of any public information regarding the types of algorithms used to implement ActivityRecognitionClient and related services?
+robguinness,896660,26339363,0,Can you direct me to a particular presentation? It's not obvious to me which one would discuss Activity Recognition...
+robguinness,896660,26493347,0,I'll give it a try and let SO know how these look!
+auramo,4110,26781308,0,Now there's a new version which works further: https://github.com/dropbox/dropbox-js/issues/106#issuecomment-22726393
+axon,960174,27085573,0,"It definitely still exists: http://www.boostpro.com/download/
+Perhaps it's not being continued??? I see no obvious signs that anything has changed (it looks like it's still as active as ever)."
+colymba,1979553,26338919,0,"Editing ManyMany fields via a GridField was introduced in SS 3.1 beta 1, so if you are on 3.0, you can not use it. You can either look at the commit and port it to 3.0 (https://github.com/silverstripe/silverstripe-framework/commit/c8136f5d4c8a37a4da274cd1c93907c0a2af86a) or upgrade to 3.1 which is probably a good idea and doesn't take much.
+
+the `$config` var is part of creating the GridField, it was a very short snippet so didn't have all the parts before, I've edited the answer above with the whole code for the GridField and added a link to the doc."
+colymba,1979553,26370488,0,"I've been using a variant of this example https://github.com/trek/ember-todos-with-build-tools-tests-and-other-modern-conveniences, you can then link the output .js file in you index.html"
+colymba,1979553,26387692,0,"super calls the same function on the parent class. when extending Ember.View it doesn't really matter, but if you were extending a View which has its own didInsertElement hook, you'll have to call super for it to be executed too."
+Ilmari Karonen,411022,26312046,0,"That's not really a self-contained example (it doesn't demonstrate the problem on its own), but thanks, I think I can guess what your problem is now.  Let me just type up an answer..."
+colymba,1979553,26422516,0,Have you looked at http://stackoverflow.com/questions/8853396/logical-operator-in-a-handlebars-js-if-conditional/9405113#9405113 there're quite a few examples to write custom conditions helpers. Also *index* is available via `@index`
+colymba,1979553,26819295,0,"cool, glad it worked. updated the answer fixing `validate()` to also return its parent, thanks for pointing it out."
+colymba,1979553,26902529,0,"not sure... I usually seen the 'Forbidden' message when trying to access an action which is not explicitly defined in a `allowed_actions`. Can you post a link to a Gist with your code in, so I can try and test it on my side?"
+colymba,1979553,26918773,0,"thx for the code, did some digging and it seems to be a SilverStripe bug. Basically if the Upload/Validation returns any error the server respond with 403 Forbidden code. A quick fix is to comment out line 1226 of UploadField.php `if(!empty($return['error'])) $response->setStatusCode(403);`. This will need more work and probably a PR though..."
+colymba,1979553,26926818,0,Pull Request submitted if you want to track when this is fixed https://github.com/silverstripe/silverstripe-framework/pull/2344
+colymba,1979553,27215888,0,I don't get it.
+Kayaman,2541560,26297577,0,"In a web application or in general? In a web application one wouldn't generally even try to add multithreading code, due to the nature of webapps."
+auramo,4110,26846846,0,Got it working with the version mentioned in my previous comment: https://github.com/dropbox/dropbox-js/issues/106#issuecomment-22827628. The secret was to add the InAppBrowser plugin with this command: cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+Esailija,995876,26499497,0,"This is hotlink protection, not general protection"
+auramo,4110,26478113,0,The master version seems to have the same problem: https://github.com/dropbox/dropbox-js/issues/106#issuecomment-22203159
+eis,365237,26856460,0,"@JBNizet that's an answer, really"
+James Elderfield,1488801,26987325,0,"The code would depend on the form of your matrix. If it's just a matrix of numbers I, personally, would output to a csv format and then use the read.csv() function to load it back in. What is each element in the matrix?"
+eis,365237,26511733,0,@user2660389 this means you have a similar issue of missing libraries. This time you're missing jettison library. You can search for missing libraries [like this](http://mavenhub.com/c/org/codehaus/jettison/mapped/typeconverter/jar)
+eis,365237,26513068,0,"action attribute is required for HTML to be valid. However, it can be empty, so form will post to itself. Also, `<?` usually only works if shorttags are enabled - `<?php` is the standard way (and yes I know about php 5.4... )"
+James Elderfield,1488801,26986186,0,@HWende High five to you too!
+eis,365237,26651093,0,what is your DB connection charset? and database charset?
+Luís Ramalho,848250,26378420,0,"Yeah, I wasn't sure which records you wanted to order. Sorry about that, but glad you figured it out."
+Luís Ramalho,848250,26378396,0,"Great Andrey! Please accept my answer if it helped you, any other questions you should open a new question. Thank you"
+eis,365237,26653538,0,You should add it as an answer and mark that as accepted.
+eis,365237,26677409,0,"""i am calling from contact.jsp like Home"" - could you elaborate this? what do you mean?"
+eis,365237,26678981,0,duplicate of http://stackoverflow.com/questions/13400075/reflection-generic-get-field-value ?
+Luís Ramalho,848250,26360780,0,Your `user_spec.rb` should end with 3 `end` keywords.
+SAM,462720,27025833,0,"I need to take a closer look at CDI for this purpose when I have time to return to this. Thanks for the pointer, @TheArchitect. I'll confirm it once I've had the opportunity to test it in practice."
+SAM,462720,26894513,0,@DataNucleus Thank you very much for your time and expert opinion.
+SAM,462720,26883512,0,"@MuhammadGelbana, thanks. I did scan through it, but this is also a general question. In some cases the access platform would work for me, but I have other cases where I need more manual control. Perhaps the answer I'm looking for is somewhere in the sources. I will continue researching as soon as I can spend some more time on this, but for now I have to continue with JPA. Meanwhile, if someone already has the answer that would save time for all of us."
+eis,365237,26728175,0,"nevermind, my bad."
+eis,365237,26739516,0,I don't see any messages about the deployment of the app. what happened when you tried to deploy it?
+eis,365237,26756108,0,"@CKLee again, depends on your use case. You should use mvn release:branch if it fits your usage scenario (see manual entry [here](http://maven.apache.org/maven-release/maven-release-plugin/examples/branch.html). In reality there might be cases that you might want to branch off some specific tag in the past and I've myself done it ""manually"" then."
+eis,365237,26502752,0,"@user2660389 if this solved the error in this question, you should accept this answer and if you still need help, open a thread for that other error (or search for it)"
+eis,365237,26489306,0,"I didn't downvote, but you could refer to actual spec for proof. JSONString is valid, which can be seen from ""15.12.1.2 The JSON Syntactic Grammar"" at [ECMA standard](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf)"
+eis,365237,26498287,0,"@mael by ""external"" I'm assuming it is out of his control. If he has access to that servlet or domain, then yes, you are correct."
+eis,365237,26417331,0,"grep is just for extracting the information, nothing prevents using windows methods for that instead. windows has ""find"", and you can install grep there, too. But you should be able to see the information even without it, see my answer."
+eis,365237,26396279,0,@user2642814 Checking for iframes cannot be realiably done with PHP. You can only check for http_referer but that's very unreliable.
+eis,365237,26396377,0,@user2642814 I modified my answer and added a link if you want to explore http_referer way of doing it.
+eis,365237,26396674,0,"Well, it cannot be reliably done. You can hack something with http referer check but it will only work in some use cases and some browsers."
+eis,365237,26397098,0,"You could accept the answer, if you feel this has answered your question."
+James Elderfield,1488801,27023622,0,The example I linked to will get you to understand the basics of OpenGL in Qt. Apart from that you can read normal OpenGL tutorials (ignoring talk of GLUT which is just another windowing system) - such as http://www.opengl-tutorial.org/ or http://lazyfoo.net/tutorials/OpenGL/.
+eis,365237,26414293,0,so iframe src is https. is your main page https? is the page you're trying to frame your own? is it on the same domain? does it send x-frame headers?
+eis,365237,26417136,0,"can you see view info, including uuid, with `cleartool desc -l vob:<vob_tag> | grep ""view_name""`?"
+eis,365237,26316030,0,"@Envious look at the quality of your posting. Even if you would've been 10 seconds ahead, I don't think you would've got upvotes, since it is not easy to understand what you are trying to tell, code example is messy etc. Focus on quality, not speed."
+eis,365237,26498019,0,"but that won't work so easily if the servlet is indeed an external servlet, in another domain. You'd need a proxy."
+eis,365237,26316276,0,"By looking at your other posts, it seems you would benefit from reading these and trying to improve your postings based on those: http://msmvps.com/blogs/jon_skeet/archive/2009/02/17/answering-technical-questions-helpfully.aspx http://blog.stackoverflow.com/2010/10/asking-better-questions/ http://meta.stackexchange.com/questions/7656/how-do-i-write-a-good-answer-to-a-question http://stackoverflow.com/questions/how-to-answer - especially Jon Skeets blog post is a good read."
+eis,365237,26441580,0,did you try connecting locally?
+James Elderfield,1488801,27021829,0,Oh ok I didn't realise you intended to split them into different applications. Might be worth reading this http://stackoverflow.com/questions/5839132/c-how-to-make-two-programs-communicate or http://stackoverflow.com/questions/5181419/communication-between-applications
+James Elderfield,1488801,26996114,0,Perhaps it could be as simple as writing some public functions into your GUI code which the logic could call at specific times to update it. As long as the function declarations do not change between implementations you could define them differently according to which GUI API you are using. Signals/Slots would be better but are obviously Qt-only.
+eis,365237,26459254,0,"@MarkoTopolnik aren't you contradicting yourself? if equals will be called always, how could an equals check be eliminated?"
+eis,365237,26459316,0,"the link contains the right answer, but you should put it directly to your answer. Basically we have hashCode method to support hash-based containers. Like it says there, ""Under ideal conditions, hash-based containers offer both efficient insertion and efficient retrieval; supporting hashing directly in the object model facilitates the development and use of hash-based containers""."
+James Elderfield,1488801,26987678,0,Yes it is. http://astrostatistics.psu.edu/datasets/R/html/base/html/write.table.html for extra options you may or may not want.
+eis,365237,26799588,0,"you need to bundle the required libraries with your app. However, I'm not sure which libraries would actually be JRE 1.1 compliant. JRE 1.1 is over 15 years old already."
+Ilmari Karonen,411022,27138450,0,"You could follow the instructions at [this question's](http://stackoverflow.com/questions/7437177/force-openssls-rngs-to-return-a-repeatable-byte-sequence) answer, but just replace the libc `rand()`-based implementation with your AES-based PRNG. If you need specific help with that part, I'd recommend asking a separate question about it and describing what you've managed to do so far."
+auramo,4110,26417769,0,"Great! I'll test the master version and if it doesn't work, at least I don't have to host and create the interactive https login page myself because you have created one already."
+eis,365237,26863802,0,"@Boann ""java must have a way of knowing at which part the thread is actually doing its job. They use run method for that."" this is the reason I'm referring to - they need some kind of placeholder that's telling the implementer ""this is the place where you should put the workload on""."
+eis,365237,27131995,0,"You are introducing a potential NPE on connect.close() there, you have to check for null. In addition, it is good practice to close statements, resultsets as well, in the reverse order that you obtain them, even if it is usually done automatically on closing of connection. Ignoring exceptions is not a good idea either."
+eis,365237,27132236,0,"@ThomasW I don't think Kevin claimed there are multiple connection instances, he was just saying it's not closed. On closing the connection, other resources obtained from it should be freed as well, so I think it should fix the problem of statements piling up."
+Ilmari Karonen,411022,27101707,0,"Your question seems to be off topic for Stack Overflow, since it's not primarily about programming. You might get better answers to it on our sister sites, http://security.stackechange.com/ or http://webmasters.stackexchange.com/. In fact, I wouldn't be surprised if someone had already asked the same question there before."
+eis,365237,27146344,0,"this is actually what should be the accepted answer, IMHO."
+eis,365237,27146369,0,"Np, glad it worked. It seems it's actually [documented](http://fi2.php.net/function.mail#40204) that qmail doesn't accept `\r\n`, only `\n`."
+eis,365237,27149365,0,so what is your maven configuration (settings.xml)?
+eis,365237,27152049,0,is `property` vs `propery` in your getter method also wrong code? could you actually provide a working example?
+eis,365237,27181284,0,everything -> anything
+eis,365237,27188737,0,"another idea: wire those processspecifics as separate classes, implementing their own interface."
+Kallja,515029,26460241,0,It indeed is possible to instruct JAX-WS to inline the schema. See my answer above for how instructions on how to achieve that.
+Kimmo Lehto,681520,27019014,0,"AWS works fine on Rails 2.3 and there's a fork that works on Rails 3, but there doesn't seem to be one for Rails 4. Anyways, I'd recommend wash_out instead of AWS, the project is still very much alive, unlike AWS and it's forks. AWS is also tied to the dead soap4r package."
+Phesto Mwakyusa,1147622,27091483,0,the master file has thousands of these lines `code`SOURCE H:/uspto_db/mysql/2012/ipa120126/loadStatements.sql; `code` what I need is how to call only one master file and let the process call each source... sequentially until all is done.
+M.Salomaa,1292978,26529364,0,You can return any view in getView method. Just return your custom view.
+Ilmari Karonen,411022,26888604,0,I think there must be something wrong with your code; it's accessing elements of `res` before they're initialized.
+Lauri,2318810,26969497,0,"Thanks, this does exactly what I needed. As a side note I use Bootstrap and there is already introduced 'hide' class, so it took some time to figure out why the solution did not work initially."
+auramo,4110,26294680,0,Ran into this nasty CryptoJS bug: https://code.google.com/p/crypto-js/issues/detail?id=38&can=1&q=openssl%20base64 Spent ages banging my head to the wall. Accidentally Latin1 decode of the utf8 data produced the first few words correctly (unlike utf8 decoding which just crashed) and only then started to look weird. In the end I just had to remove newlines from the encrypted base64 data before decrypting and it started working. Whew.
+auramo,4110,26353755,0,"Also got encryption working, fought ages for scandinavian characters (they got encoded wrong). This meta tag in my html fixed it: <meta http-equiv=""Content-Type"" content=""text/html; charset=utf-8"">. Also had to split encrypted base64 to 64 char lines so that openssl was able to read the output."
+eis,365237,27125918,0,"what are you trying to do? write to a file, yes, but why are you using writeUTF method if you're writing 1's and 0's?"
+eis,365237,27110916,0,"or through any other means, as the information is not present in bytecode."
+eis,365237,27091086,0,"like I said, it can easily cause other issues in the long run. See my answer about fixing your configuration, which might fix it."
+eis,365237,26941224,0,It seems to have the functionality to detect the language used. Can you clarify how will that help?
+eis,365237,26865170,0,"@ruakh agreed. The way to implement that properly is that the method should be abstract & protected in the parent class. However, it seems that Thread class was wanted to be usable in itself, which an abstract class (a class containing an abstract method) wouldn't be. Doing these kind of things through interfaces seems to be the alternative then."
+eis,365237,26883342,0,"Um. I know you can have a non-abstract protected method. What I said that you cannot have an abstract method without having an abstract class, and that an abstract class wouldn't be useful by itself."
+eis,365237,26900975,0,"I've seen with Liferay that when a deployment takes a long time to activate, JBoss is showing a blank page in the meantime. Could that be it?"
+eis,365237,26901898,0,can you clarify what does your app actually do? what kind of app it is? does it do any special things on startup? what kind of dependencies does it have (jms queues? datasources?)?
+eis,365237,26901928,0,why is this -1 ?
+eis,365237,26901973,0,"so you still have the problem? or not? if the problem is resolved, post the solution as answer and mark that as accepted."
+Ilmari Karonen,411022,27138378,0,possible duplicate of [Force openssl's RNGs to return a repeatable byte sequence](http://stackoverflow.com/questions/7437177/force-openssls-rngs-to-return-a-repeatable-byte-sequence)
+eis,365237,26943895,0,"I didn't vote for off-topic, this question is not off topic. But it is a duplicate of lot of other questions here."
+eis,365237,27038285,0,"if that's the way you get it working, fine, but it is very suboptimal and can easily cause issues. you should use full absolute paths, not relying on anything relative."
+eis,365237,26945926,0,"Do you have any exceptions happening before that? On previous version of JBoss, there was an [issue of leases leaking](https://issues.jboss.org/browse/JBAS-1599). Does that sound it could be the case for you as well?"
+eis,365237,26969353,0,"pull from master repo, push to dev repo. what's the problem?"
+eis,365237,26980200,0,"well, using the same SSH keys? do you have some issue doing so?"
+eis,365237,27018341,0,"if you've solved it, add it as an answer and mark that one accepted."
+eis,365237,27019009,0,"This is not true. You don't *have to* do that, parameters work just fine even if you don't pass them separately, if you take care of escaping."
+eis,365237,27022481,0,"@Bohemian it will still not work but due to other reasons (see [my answer](http://stackoverflow.com/a/18396355/365237)). At least in windows you don't have to separate parameters, though separating them is probably good practice anyway."
+eis,365237,27027859,0,... what? **no**. you're not supposed to put your source files under tomcat or create a folder for them.
+Ilmari Karonen,411022,27099730,0,possible duplicate of [How can I select all the empty tag using jQuery.?](http://stackoverflow.com/questions/18436985/how-can-i-select-all-the-empty-tag-using-jquery)
+Kayaman,2541560,26806969,0,"Well what do you mean that ""it didn't response anything"". You're not printing the strinbuilder anywhere, what's the exact code you're using? Copy and paste it, so you don't get syntactical errors."
+Mridang Agarwalla,304151,26757933,0,"@RomanNurik, Shouldn't the extension always be registered? Whys does Dashclock call the `onDestroy` method and not re-initialize it even though the extension is added into Dashclock? This seems to have got me stuck into some kind of a catch 22 situation. I'm guessing I've missed a very important part. Thanks for your help Roman. I appreciate it."
+Hieu Nguyen,2527433,26612807,0,I assume that you are still testing in your localhost? you should be able to see something in the terminal (result of `print row`).
+Hieu Nguyen,2527433,26581791,0,"That command is supposed to be typed in the terminal. And by the look of it, you are in Python shell or Django shell.
+So type `quit()` to quit the shell and try that command again."
+Jukka Puranen,167749,27002713,0,"Well yes I am and you're right the starting url is wrong. :-o Oh brother, don't I feel stupid now. :-D"
+D_K,158328,27203935,0,cache stats show on the solr admin page. detailedDump would show in the logs
+Hieu Nguyen,2527433,26606879,0,Could you set `socket = /var/run/mysqld/mysqld.sock` directly? That way you don't have to link `/tmp/mysql.sock` to that path manually.
+Hieu Nguyen,2527433,26607846,0,You're welcome. I've updated the answer a bit to give more insight.
+Hieu Nguyen,2527433,26607968,0,Ah right only on PostgreSQL you can specify the distinct field (I'm using mostly Postgres). And in that case you have to use `order_by()` with `distinct()`. Make sure to read the note: https://docs.djangoproject.com/en/dev/ref/models/querysets/#distinct
+Hieu Nguyen,2527433,26608165,0,"What do you mean by ""sort the results""? Sort alphabetically? Or by what specs?"
+Hieu Nguyen,2527433,26608257,0,Could you post your main `urls.py`? Have you tried restarting the server after changing the code?
+Hieu Nguyen,2527433,26612833,0,"You should read more about the `request` object here: https://docs.djangoproject.com/en/dev/ref/request-response/#httprequest-objects, that GET and POST you see are attributes of this object. Feel free to accept my answer if it helps"
+Hieu Nguyen,2527433,26411532,0,do you see any error when seeing above view from brower? what response did you get?
+Hieu Nguyen,2527433,26614072,0,"I see, yes you can. I've updated my answer."
+Hieu Nguyen,2527433,26615195,0,Hmm I take it as you can't see the terminal output then. What do you want to do with the output of the csv?
+D_K,158328,27126123,0,"how big is the index? You could check the solr cache values as well: sizes, evictions and hitRatios."
+Hieu Nguyen,2527433,26639046,0,Sorry I can't help further if you are not taking my advice and still trying to use one view for everything. It's very messy and hard to debug with your current code.
+Hieu Nguyen,2527433,26653851,0,You have to switch it back to `function (data) { $('#authorisedreporter').html(data); .... }`. Use `load()` is wrong.
+Hieu Nguyen,2527433,26682679,0,why don't you split your view into 2 functions like my guide? it's way easier to debug that way.
+Hieu Nguyen,2527433,26686361,0,"You can use the field for saving to update the data, don't merge them into one view so you can't debug where is the error"
+Hieu Nguyen,2527433,26689588,0,What's the problem actually? It redirects on form submission? Could you show your template code?
+Hieu Nguyen,2527433,26577066,0,Yeah that's why I recommend him to drop this idea.
+Jukka Puranen,167749,27019950,0,"Yes, the actual start url  is http://golfpiste.com/kentat/?p=seuralista which I actually was using already. Wrote it wrong here for some reason. In any case the actual problem was that the rule was incorrect. The query params were mixed up."
+Hieu Nguyen,2527433,26534841,0,Then I'm sure that your issue is something else. Check my fiddle here with nearly identical data: http://jsfiddle.net/hieuh25/AT3SF/1/
+Hieu Nguyen,2527433,26532354,0,What for then? When you are using Firebug or Chrome dev tools. The HTML is ***always** indented.
+Hieu Nguyen,2527433,26429984,0,Hmm is that old version of PIL? You can try fromstring() instead of frombytes()
+Hieu Nguyen,2527433,26426684,0,I can't reproduce this. Could you post your HTML and where you initialize typeahead? My fiddle: http://jsfiddle.net/md6bx/
+Hieu Nguyen,2527433,26430026,0,I don't think I can help without seeing any code.
+Hieu Nguyen,2527433,26436560,0,"no you don't do anything wrong, check my edited answer for more details"
+Hieu Nguyen,2527433,26441809,0,"Yes that's true, could you test this 2 lines alone: `resp = twilio.twiml.Reponse()` and `resp.sms('some message')` ? I don't read the docs but what do they do?"
+Hieu Nguyen,2527433,26457738,0,"Check my edited answer then, you need to use `exclude()` instead of `filter()` since you want to get the list of mismatch only"
+zvona,212878,26866667,0,Do you have an URL for the site where it could be tested? It's hard to make guesses.
+Hieu Nguyen,2527433,26459277,0,"Ah your question wasn't clear, I thought you had to get the report with mismatched report type. Answer updated."
+Hieu Nguyen,2527433,26462430,0,"So if you add more quotes to the `test_list` like in my work around above, does it work? I still think this issue is something else."
+zvona,212878,26656607,0,"initKeyEvent is, I think, Firefox only. Check this then: http://stackoverflow.com/questions/1897333/firing-a-keyboard-event-on-chrome"
+zvona,212878,26656559,0,"You're dispatching ""keypress"" event while you're listening to ""keydown"". Could this be the issue?"
+Hieu Nguyen,2527433,26506122,0,It means that there isn't `id` in POST request. Hmm you can change the message to Error1 and Error2 and debug from there.
+Hieu Nguyen,2527433,26504721,0,"Hmm `console.log(data)` in the ajax success, I think the view should be correct but you can do `print registerform` right after `registerform = UserRegisterForm(request.POST, instance=user)` in `fetch_reporter_form` view to debug."
+Hieu Nguyen,2527433,26522406,0,"Yeah it's working with shell doesn't mean it can work well with ajax, any line on the view can make the AJAX error. Typically it could be view throwing exception or doesn't render correctly."
+Hieu Nguyen,2527433,26522713,0,let us [continue this discussion in chat](http://chat.stackoverflow.com/rooms/35038/discussion-between-hieu-nguyen-and-mhsmith21)
+Jukka Puranen,167749,27020178,0,"Thanks for your help, much appreciated."
+Hieu Nguyen,2527433,26521950,0,Could you post your full view code then?
+Hieu Nguyen,2527433,26693051,0,Could you post the `render_block_to_string()` code? It's not native Django shortcut
+Hieu Nguyen,2527433,26702437,0,http://chat.stackoverflow.com/rooms/35350/discussion-between-user2086641-and-hieu-nguyen
+D_K,158328,27110951,0,"can you share some info, like what's the RAM settings, RAM usage before the crash, cache situation? Good idea in such cases is to set detailedDump=true"
+ttiurani,2659424,26501720,0,"Thank you! This was it, so simple."
+ttiurani,2659424,26492071,0,"I have this logging:
+
+https://gist.github.com/ttiurani/6172154
+
+with this:
+
+https://gist.github.com/ttiurani/6172164
+
+test. I only get one ""UUIDTransactionEventHandler.UUIDTransactionEventHandler"" but no other. (I hope it's not that System.out.println somehow doesn't work when Neo4j calls it..)"
+ttiurani,2659424,26492593,0,Might the problem have something to do with the <T> parameter set as <String>? Should it be something different?
+ttiurani,2659424,26492991,0,"UPDATE: Now it seems that the methods in UUIDTransactionEventHandler.java do get called but only when I don't have a pre-existing database. Still the ""uuid"" property is not found."
+ttiurani,2659424,26493301,0,..and that seems to be because data.createdNodes() returns an empty iterator in the beforeCommit() method. Which seems odd.
+ttiurani,2659424,26493922,0,"..and that is the case only for 2.0.0-M03, 1.9.2 never calls the beforeCommit method even for a empty database."
+ttiurani,2659424,26495418,0,"Thanks for your suggestion! I created a KernelExtension as well, but it has the same problem as the PluginLifecycle implementation: beforeCommit is called only for an empty database in 2.0.0-M03, and there createdNodes is empty."
+pyryjook,2673890,26920904,0,Well I think this has something to do with mousewheel-events or css-transform easing because iScroll is fully based on those. Native scroll works as espected
+pyryjook,2673890,26922281,0,"Yeah, you're right. I'm gonna edit my poorly placed question. I blindly tought that it's self-explanatory that, if I place question to stackoverflow, there is some coding involved. My bad.."
+pyryjook,2673890,26922984,0,"Thank you for your fast answer and good contribution! Let's hope they get to it soon at Mozilla. But yeah, I could use a workaround also!"
+Davis Sorenson,1695041,26609168,0,"Thanks! This is also a good solution, but git-mergemate does exactly what I had in mind by default. git-imerge is also good, but a little bit overkill for my needs."
+jku,2241569,26421906,0,"Sure, using threads for other things may be needed: I was just saying that calling gtk functions from several threads is typically a very bad idea. Also, g_idle_add() is a widely used function: it's unlikely that it would be somehow broken."
+jku,2241569,26422127,0,"With regards to removing and re-adding widgets: are you aware that Container will steal the reference when you do _add() and then _remove()? In other words when you remove a widget, it automatically gets destroyed unless you have taken another reference (this also means your custom destroy function probably shouldn't call destroy on the labels)"
+jku,2241569,26665540,0,"""result is not satisfying"" is not a good enough problem description, especially not if you don't share a compilable source file. That said,  looking at the source, using GtkLayout seems a bit odd: are you sure you need it? The most typical solution is a ScrolledWindow + Viewport."
+jku,2241569,27036466,0,One comment to this (correct) answer: `GtkIconSet` will be deprecated in 3.10. I believe the future-proof way to do the same is by using  `gtk_icon_theme_load_icon()/gtk_icon_theme_load_icon_for_scale()` but I have never actually used them myself.
+D_K,158328,26403424,0,"to rule out syntax issues, would standard if / else behaviour be same?"
+jku,2241569,27073011,0,"Hmm, actually now I remember Some OSes (Ubuntu?) have added this executable limitation for files outside the standard XDG desktop file locations... If they've extended that policy, then I guess you may be right after all. It's still not a universal solution, but I'll remove my down-vote in any case."
+jku,2241569,27092609,0,"For the separate window workaround: you need to either use `gtk_widget_reparent()` or manually a) take a reference to the child, b) remove it from temporary container, c) add it to intended container, d) unreference."
+ttiurani,2659424,26491587,0,"Thank you! This does solve start() not being called (because it is called explicitly). But I don't get any calls to:
+
+https://github.com/ttiurani/neo4j-uuid/blob/master/src/main/java/org/neo4j/extension/uuid/UUIDTransactionEventHandler.java
+
+Do you have any ideas why that is? I'll update the original question with a better test to show this."
+Hieu Nguyen,2527433,27132613,0,could you post your models code?
+Hieu Nguyen,2527433,26747590,0,"Does `{{ item.Time|time:""H:i"" }}` work?"
+Hieu Nguyen,2527433,27056813,0,possible duplicate of [Django Ajax-Jquery does not fetch the data](http://stackoverflow.com/questions/18397100/django-ajax-jquery-does-not-fetch-the-data)
+Hieu Nguyen,2527433,26758147,0,"If you change `UserProfile.objects.create(user=instance)` to `UserProfile.objects.create(user=instance, gender='M')`, what's the effect? I can see that `gender` is not optional in your `UserProfile` model."
+Hieu Nguyen,2527433,26759599,0,Answer updated.
+Hieu Nguyen,2527433,26760442,0,Can we see your model code? Have you tried the above query? It looks like it should work.
+Hieu Nguyen,2527433,26834908,0,"Well this is just a basic example, if you can't construct the SQL in your head then you can't make the queryset correctly ;)"
+Hieu Nguyen,2527433,26834944,0,"Hmm hard to say, do get really get an array as result of the search, what's the result of `console.log(parsedResponse)`?"
+Hieu Nguyen,2527433,26889537,0,"It had some problems before but is supported now, check https://github.com/kennethreitz/requests/issues/498"
+D_K,158328,27080312,0,"add debugQuery=true to your query parameters and see extended info. BTW, space before &defType looks suspicious."
+Hieu Nguyen,2527433,26902471,0,Easiest way could be using http://www.hurl.it/
+Hieu Nguyen,2527433,26902925,0,And btw could you post the previous step when you get the authorization code also? Perhaps you got the wrong code?
+Hieu Nguyen,2527433,26968088,0,I don't know about nodejs part but I would recommend you include the reference as normal.
+Hieu Nguyen,2527433,26968712,0,"Hmm you got the correct authorization code from LinkedIn and the above code should work flawlessly, I can't see any problem here. Probably this is LinkedIn's issue. Can you do `print postdata` above to debug and also post the full traceback if there is an error?"
+Hieu Nguyen,2527433,27020627,0,"I think your `page` arg is the same as `id` in my example, so you can use `page` only. You don't use `type` in your route, right? That's why you need to reduce it into 1."
+Hieu Nguyen,2527433,27020903,0,"Django doesn't care about your HTML, it cares about the URL you request. In this case you are requesting `/gul/1` and `/gul/` is static, so there is only 1 argument that has the value `1`. That value will be sent to the view, that's why you can't have 2 arguments `type` and `page`, it can be `page` only."
+Hieu Nguyen,2527433,27020941,0,Can you show us an example of how do you want to populate it? Or do you mean using AJAX with typeahead.js?
+Hieu Nguyen,2527433,27021061,0,answer updated then.
+D_K,158328,26726421,0,"can you share some figures, what worked faster what didn't?"
+Hieu Nguyen,2527433,27022137,0,"I guess you should read more about it here https://docs.djangoproject.com/en/dev/topics/http/urls/#how-django-processes-a-request. Django uses regex to match a url pattern, so any text like `gul` will be considered as static text."
+Hieu Nguyen,2527433,26411560,0,what exactly do you want to update?
+Hieu Nguyen,2527433,26411387,0,"If so, why don't you use `{% static 'path/to/file' %}` template tag? it will pickup the `STATIC_URL` in `settings.py` for URL"
+Mridang Agarwalla,304151,26757915,0,"@RomanNurik, Of course, I could publish a Broadcast from my GCM receiver and handle the Broadcast in my Dashclock extension but it seems this requires the extension to be initialized e.g. this code snippet https://code.google.com/p/dashclock/issues/attachmentText?id=292&aid=2920012000&name=ARSDashClockExtension.java but it seems that after a period of time, Dashclock calls the `onDestroy` method of my extension, which unregisters the `BroadcastReceiver` and therefore I can never be sure that my embedded `BroadcastReceiver` in the `DashclockExtension` will be registered."
+Kayaman,2541560,27180384,0,"@dasblinkenlight If it's a brainteaser, why is he asking it here. We don't need to get our brains teased. It could also be an interview question, another thing we don't need to answer."
+Kayaman,2541560,27166950,0,Usually it would be the Controller which handles network operations and uses the Model to store/retrieve data.
+Kayaman,2541560,27166990,0,"I would assume that he is not implementing a web application, since he talks about his own protocols."
+char m,218640,26998285,0,thanks. i was designing to use optional until i understood the problem. i'll use overloading.
+Kayaman,2541560,27168398,0,"@PeterJaloveczki They refer to every constants, mathematical constants are only a special case. But what do you mean ""single integer 50 times""?"
+Kayaman,2541560,27168466,0,"@herman Yes, one could argue that it is. Let's edit the post a little bit..."
+Kayaman,2541560,27168507,0,"@PeterJaloveczki Of course, if it's a constant it should be defined as a constant. Especially if you use it in several places and it might change in the future."
+Kayaman,2541560,27168833,0,"@BugalugsNash It means that it's okay to write code such as ""for(int i = 0;i < size; i++)"". You'll learn to recognize where it's okay to use literal constants and where not to."
+char m,218640,26998064,0,ok. thanks. didn't know that.
+Kayaman,2541560,27210423,0,Are you saying you can't change 'a' in the constructor? Because that should be allowed.
+Hieu Nguyen,2527433,26409600,0,what was the problem exactly? Since your final code doesn't look so different to the first one
+char m,218640,26998008,0,i can't at the moment without installing stuff at home. sorry about being lazy.
+Kayaman,2541560,27213418,0,You don't need to setVisible(true) every single component inside the frame. Just the JFrame itself.
+Kayaman,2541560,27213780,0,Did you try just flipping the buffer again?
+Kayaman,2541560,27213804,0,Can you order the results by anything unique? Do that and it'll work just fine.
+Kayaman,2541560,27214036,0,"It won't matter to the JPA pagination mechanism. It doesn't paginate according to the ids, but row numbers."
+Henri Hietala,2541668,26939063,0,http://jsfiddle.net/CPqPT/
+stonerichnau,2689550,26807137,0,"Yes, I added another controller to the post. I thought it could have something to do with the timings. Unfortunately I'm such a noobie that I don't understand how I would do `The $save() method takes a callback function which you can use to`. So if you could elaborate how I would do that?"
+stonerichnau,2689550,26808407,0,"Ok, seems to work! Thank You. One more minor question though: why does  `$scope.updateScenes` work but not `$scope.updateScenes()`?"
+char m,218640,26998416,0,"sure, but it's bad design as u said. forcing to use parameter name in call just to avoid writing an overloaded method is stupid."
+Kayaman,2541560,27152233,0,@connergdavis Post some of your actual code to see what's happening. Are you using blocking or non-blocking mode?
+Kayaman,2541560,27134815,0,@EJP indeed I was thinking about InputStreams. He was getting an InvalidMarkException because he hadn't set the mark.
+Kayaman,2541560,27129701,0,How much memory are you giving your Java program?
+Kayaman,2541560,26806070,0,"Are you sure that's a good idea? If you need to analyze the logs by class, you can easily split it up. If you have a decent amount of classes that do logging, it'll make it nigh impossible to detect errors."
+Kayaman,2541560,26806483,0,Reflection can't add fields. You need bytecode manipulation for that.
+Mridang Agarwalla,304151,26757821,0,"@RomanNurik, I think both you an CommonsWare mean the same thing i.e. that I could create a separate GCM receiver and register the intent handlers using the manifest file. This would definitely work but I don't know how I can publish an update using `publishUpdate` from an external `BroadcastReceiver` since it doesn't extend the `DashclockExtension` class."
+James Elderfield,1488801,27031228,0,"I'm not entirely sure what you want but to run multiple commands on the the cmd line from R you could: write a .bat file and tell that to run from within R, make multiple system() calls or use the syntax from here http://stackoverflow.com/questions/8055371/how-to-run-two-commands-in-one-line-in-windows-cmd in one call to system()"
+Kayaman,2541560,26807165,0,"@samuelgrigolato I never give the benefit of the doubt here. People make typos and stupid mistakes all the time, and post them here way too eagerly."
+Kayaman,2541560,26814392,0,I'd recommend the jboss forums for this.
+Kayaman,2541560,26814751,0,"Well, either break down your program into small chunks that you can test separately or use a debugger to see what's going on."
+Mridang Agarwalla,304151,26727641,0,"@RomanNurik, I hope you can shed some light on this."
+Mridang Agarwalla,304151,26651522,0,The issue is that I haven't found all these issues documented anywhere. Most of the GCm documents speak on a very macro level and I've gotten confused. Thanks Eran.
+Mridang Agarwalla,304151,26651482,0,"Working with the registration id is more than good enough for me. The first time, the user installs the application. He can email the registration key to himself and use that in his computer. I just toyed around with my application a bit and it seems that calling `register` always returns a different key while the documents say otherwise. It also seems that when sending a GCM message to the server, the GCM server responds with the new registration key of the device, just one which you have to save. If you don't save it and use that in future requests, the GCM messages won't go through."
+char m,218640,26999232,0,"thanks a lot. i do not have environment at home and was too lazy to download one (and yes, read the comment about online environment),"
+char m,218640,26998971,0,ok. thanks. i thought i always have to specify at least one value to params. my bad.
+Kayaman,2541560,26827091,0,@MiserableVariable But ConcurrentModificationException has nothing to do with multi-threading.
+char m,218640,26998881,0,"ok. what would happen when calling like this: ShowMessage(""1"", ""2);"
+char m,218640,26998599,0,i tried it but it said 3 minutes. But then I understood that does it really solve it. See my edit in question.
+Kayaman,2541560,26831765,0,"You make a lot of assumptions about what he's going to do with the objects inside the list. I have 15 years of Java under my belt, but I'm still not a clairvoyant."
+Kayaman,2541560,26831885,0,"@JasonC No, but my ""depending on what you do with it"" disclaimer was meant to address that. If you're merely iterating the prices then you're golden, but it seems that he'll be doing other things with the classes as well (since they have their own additional properties)."
+stonerichnau,2689550,26937918,0,"Ok, thanks. Span didn't work, but the <style> did! :)"
+stonerichnau,2689550,26938138,0,"Ok, you're right. Now it works here too! Using Firefox, it seems to be a bit slow in refreshing its cache or something. Very much thanks! :)"
+Lauri Laanti,2455269,26523808,0,"Very interesting! Unfortunately the rcplauncher.properties file appears to be client-side only. Sysenv values would be server-side, but not NSF-specific. Clearly some research is needed."
+Hieu Nguyen,2527433,26331466,0,"Looks kinda impossible without a DB, you can't really check if the user solved which quiz already. Though you can create a list of callers and use a text file to store it, it seems to be a work around to me."
+Hieu Nguyen,2527433,26352667,0,what's the result of `which pip` and `which python`?
+Hieu Nguyen,2527433,26355634,0,I don't see anything wrong with the code. Could you debug with `curl`? Otherwise 404 means the URL is wrong.
+Hieu Nguyen,2527433,26367964,0,"Somehow I don't think you can benefit anything from using User model (or anything related), you don't need username password, authentication or that stuff so I guess creating your own model is the best choice."
+Hieu Nguyen,2527433,26368715,0,"Ah yeah I didn't notice the model is `Callers`. Normally I would name the model singular with capital case, like `Caller`, and the app name plural and all lower cases, such as `callers`."
+Hieu Nguyen,2527433,26386954,0,Please check my edited answer then.
+Hieu Nguyen,2527433,26387014,0,Good that you got it solved ;)
+Hieu Nguyen,2527433,26379350,0,"Like I said, you have to eliminate one of them and migrate the code to that one syntax to make it work."
+Hieu Nguyen,2527433,26379766,0,Could you check the error in console first? You still have code for bootstrap-typeahead so i guess it would generate some errors.
+Hieu Nguyen,2527433,26388518,0,"Yeah right, I guess I'm too sleepy to make an answer now. Thanks"
+Hieu Nguyen,2527433,26393310,0,"No I haven't. The fastest way to do is to flush the DB and run syncdb again. Remember that syncdb is not used for changing data of an existing table. If you have other problem, please post another question"
+Hieu Nguyen,2527433,26401229,0,"Ajax success is getting called is a good sign, right? what's the problem?"
+Hieu Nguyen,2527433,26401905,0,Please check my edited answer. Try again and check console for debug message / error. Console is your friend. I'm sure you can debug yourself then
+Hieu Nguyen,2527433,26401938,0,What's your `STATIC_URL`?
+Hieu Nguyen,2527433,26402175,0,check my edited answer then ;)
+Hieu Nguyen,2527433,26402518,0,"although I've never used above method to serve static (I've been using `urlpatterns += staticfiles_urlpatterns()`), that problem is weird"
+Hieu Nguyen,2527433,26402779,0,could you at least post the view code?
+Hieu Nguyen,2527433,26424358,0,Do you have any CSS for the input other than Bootstrap one? Could you try to create a jsfiddle?
+Hieu Nguyen,2527433,26349136,0,Thanks! It will be useful for me later on.
+Hieu Nguyen,2527433,26339559,0,I was about to comment but it ended up as an answer
+Lauri Laanti,2455269,26542918,0,"I found only rcpinstall.properties there. (R8.5 and R9 standard install, no DOTS). Even then, it would be server-wide, so no help in this case."
+Hieu Nguyen,2527433,26347579,0,"""Doesn't work"" is not really detailed. Could you describe your problem? Error?"
+Lauri Laanti,2455269,26577239,0,I ended up subclassing the JdbcConnectionManager component.
+Lauri Laanti,2455269,26592731,0,"It's a financial application, so strict rules apply. Each customer (and their customers, it's  a two-tiered design) has their own MySQL database. Using same credentials (and storing them in a shared NTF) would perhaps constitute a security risk. So, current approach is storing the MySQL credentials in a NotesDocument protected be ACL and/or a reader field. - btw, really appreciate your insightful comments."
+ghoulfolk,2515353,26905003,0,"I take it you are creating the jTable1 within a method? Could it be possible for you to first make the jTable into a variable, which you would then call within the refTable method? this way, you could reference the jTable variable and make changes to it on the fly. I am meaning to create for eg. a  `private jTable table = new jTable();` then use the  `table` variable within the method  `refTable` as well as any other methods you need to call the  `table` in."
+ghoulfolk,2515353,26907363,0,didn't know that.. guess I've been setting it to 0 out of bad habit
+ghoulfolk,2515353,26984966,0,"Do you mean you have made it into an .exe? or a .jar? you need to let us know more about your application: does it access any databases? if so, have you included all required jars and libraries into the .exe (when you created the .exe from the jar) or the folder which houses the jar?"
+Hieu Nguyen,2527433,26310809,0,could you show your models code?
+Hieu Nguyen,2527433,26304219,0,"You're welcome. Please accept my answer if it helps ;). And remember to read PEP8, the name convention in your code is quite bad to be honest."
+Hieu Nguyen,2527433,26299239,0,Ah ok good that you solved your problem.
+Hieu Nguyen,2527433,26308257,0,I will edit my answer tonight regards your inputs.
+Hieu Nguyen,2527433,26344428,0,Hmm I thought `RelatedField` and `SlugRelatedField` only work with `ModelSerializer`?
+Hieu Nguyen,2527433,26345986,0,Could you try my edited answer?
+Hieu Nguyen,2527433,26329416,0,Also is `i.time` a datetime object?
+Hieu Nguyen,2527433,26330142,0,Answer updated! Please read each section carefully and you can get the main idea. I can't do your job instead of you so please try your best following my guide.
+Hieu Nguyen,2527433,26330243,0,You're welcome. Basically `request.REQUEST` is a dict so you can use `get()` http://docs.python.org/2/library/stdtypes.html#dict.get normally. Just ping me if you have any other question ;)
+Hieu Nguyen,2527433,26331241,0,It depends on Twilio backend and since in the example the view should receive both GET and POST so I wouldn't bet on that. Using REQUEST is the safe choice for you.
+Hieu Nguyen,2527433,26331398,0,"Okay, please check my edited answer for more clue then."
+Hieu Nguyen,2527433,26347495,0,why does `DetailView` have anything to do with pagingation? You have only 1 object and that's it
+eis,365237,26396190,0,"@user2642814 those examples deal with server side include files, which isn't the same thing as checking for frames in top != self snippet. Is that what you want? Please rewrite the question so it would be more clear what you really want."
+Esko,44523,26589382,0,Java actually nowadays has a native compiler API that can be called during runtime at will. Language being static has pretty much nothing to do with its construct loading capabilities.
+eis,365237,26359169,0,"@mark those are Jetty-specific classes, you won't find them in any API. You have to include Jetty libraries in class path to get those. That is why the instructions on the page tell to add that maven dependency. You can do that, or if you still go without maven,copy the jar directly from [here](http://search.maven.org/#artifactdetails%7Corg.eclipse.jetty.websocket%7Cwebsocket-client%7C9.0.4.v20130625%7Cjar)"
+Esailija,995876,26653175,0,"@JonathanLonowski You can get even closer to [access modifiers](http://martinfowler.com/bliki/AccessModifier.html#AccessControlDoesNotControlAccess) with conventions like underscore prefixing. Closures unconditionally prevent access, which is not what access modifiers do."
+Esailija,995876,26409819,0,You use a setter like `obj.set_Extensions = value`. You are obviously calling it like a method `obj.set_Extensions()` though
+Esailija,995876,26632647,0,"That is actually not JSON, let alone a JSON schema, it's just Javascript code. Therefore for example the quotes are not necessary. And your code runs as is if you change `.add` to `.push`"
+Esailija,995876,26409455,0,"@MuhammadUmer you should have said in your question what you wanted to do (monkey patch onreadystatechange setter), would have saved you a lot of time I think :P [Classic XY problem](http://mywiki.wooledge.org/XyProblem)"
+Esailija,995876,26632749,0,Why cannot you just use the parsed JSON directly? There is no need to have classes behind objects that just have data or are lists.
+Esailija,995876,26406498,0,"Well it's an opionion then, I know Javascript and consider this unreadable but many other good Javascript programmers consider it very readable, for instance the authors of bootstrap [famously](https://github.com/twbs/bootstrap/issues/3057) :P"
+Esailija,995876,26633113,0,@FelixKling was there a problem with the debounce implementation when it used Date.now ?
+Esailija,995876,26633223,0,@FelixKling yes setTimeout is unfortunately unavoidable for debounce I just realized. There is no other mechanism to call it later when things settle down because that by definition means the function is not called.
+Esailija,995876,26633303,0,lol it is absolutely hilarious you can do something like this with css
+Esailija,995876,26633463,0,"Using custom tags in AngularJS is not any different, if in future new semantics are attached to currently meaningless custom element, it can have unknown side-effects regardless of AngularJS."
+Esailija,995876,26633483,0,@bobbybee the usefulness of custom tag is very limited... so yeah don't. Just use `data-` attributes like `<div data-arial` for example is approved and working way.
+Esailija,995876,26406239,0,@MuhammadUmer yes that doesn't work because the methods only work on XHR objects like I said so the only thing that will work is a wrapper like I suggested... trust me
+Esailija,995876,26633536,0,@bobbybee custom attribute has same problems as custom tag names. Html5 introduced many custom attributes that have special meaning... like `required` or `autofocus` .
+Esailija,995876,26642192,0,Yes server side template processing avoids any problem with custom elements (if they are not in the output) but I don't think that is what OP meant. :p
+Esailija,995876,26652138,0,"@AwakeZoldiek when you use `new`, constructor funtions and prototypes naturally, the engines optimize that behind the scenes much like as if they were Java classes. When you clown around with dynamic closures, you make many optimizations impossible. How is that for native?"
+Esailija,995876,26404294,0,"`NaN` is of a numeric type in *every* language. Why is it ""so weird"" in Javascript?"
+Esailija,995876,26652535,0,"@JonathanLonowski ? No they are not, they are implemented as I have shown in my answer, through natural object model of javascript. See https://github.com/joyent/node/tree/master/lib. Closures don't have private *members*, they are variables that cannot support any language level features that object properties support. Further, they enforce privacy which is not done in any other language so you have tremendous inflexibility."
+Esailija,995876,26652935,0,"@fusio Object.create doesn't invoke the constructor... if the constructor has side effects or such (it can do anything a normal function can, unlike in Java), then invoking it is undesirable when setting up inheritance chain."
+Esailija,995876,26630712,0,"@Paul yeah obviously this is some WTFey code that should not see light in production, but the original problem was an interesting trivia"
+Esailija,995876,26630662,0,"@GeorgeReith yes that's a common mistake... `== false` is not the same as  direct `if( .. )`. `==` does type coercion, `if( .. )` does `ToBoolean(..)` right away without coercion."
+Esailija,995876,26630593,0,Spec wording is not implemented literally. The bytecode is as telling as the Java code with regards to what happens.
+Esailija,995876,26431101,0,"@try-catch-finally backbone is not kind of MVVM, it's a kind of bloated eventemitter :P"
+Esailija,995876,26623320,0,"This is usually a tough to predict because while the second obviosly should be faster, it however constantly crosses the JS/Native API boundary which is costly. The innerHTML
+way however invokes expensive parser and a full rebuild of a tree, however, there is no boundary crossing during this (obviously you will build the whole string in JS before passing it and just setting innerHTML **once**)."
+Esailija,995876,26623838,0,Recursively expressing something does not make it automatically easier to understand
+Esailija,995876,26431313,0,"It's actually `event_name, callback, useCapture`, if you leave out `useCapture` it will not even work in Firefox < 6"
+Esailija,995876,26625260,0,"@Rajasekhar that couldn't be more misleading, it doesn't focus on the semantics of `.constructor` vs `instanceof`.. but rather confusions around strings and objects."
+Esailija,995876,26431231,0,"@try-catch-finally I never said such a thing, in fact the whole post is pretty much just praising `new Function`. Can you explain what makes you think so?"
+Esailija,995876,26628028,0,"Try with `a = {splice: function(){}, length: 100};` in the first line :P"
+Esailija,995876,26628196,0,"@akanksha1105 what? The console.log output is not specced anywhere. You should not trust it in this sense at all. See `console.log({splice: function(){}, length: 100, 50: 3})` or something"
+Esailija,995876,26628382,0,"This is incorrect, and even half the confusion in the question. This would return `2` for `""02""` but the spec is pretty clear on the fact that leading zeroes in a numeric string disqualify it from being an array index"
+Esailija,995876,26630425,0,"Find a regex that works for urls in the first place, then you can test the quote stuff"
+Esailija,995876,26430695,0,"That's cos they are not private methods but local variables referencing function objects, the metaphor breaks down pretty much right away"
+Esailija,995876,26430443,0,"You are not really adding anything with the word `compute`, that's just obnoxious. `InMilliseconds` is something that could be argued about (unless you have other possible units and it is an overload, but I doubt that) but can definitely be left out from the name itself in my opinion. The first function I don't understand at all because getting time from timezone doesn't make sense."
+Esailija,995876,26629833,0,@dystroy yeah that is probably the more plausible explanation :P
+Esailija,995876,26629917,0,"@DavidKrmpotic `localStorage.getItem(""a"") == null` for example"
+Esailija,995876,26630056,0,What is the actual problem you have? Like what are you trying to do with this.
+Esailija,995876,26314689,0,Even desktops have trouble if you don't limit watchers
+Esailija,995876,26630273,0,"uhh wait, that regex doesn't even work for urls in the first place..."
+Esailija,995876,26653105,0,"@badsyntax well yes it does. It's word against word, what you gonna do?"
+Esailija,995876,26653444,0,@JonathanLonowski Private properties can be tampered with in Java too.  Read the link.
+Esailija,995876,26770301,0,You should show the code. The browser caps at 60 fps and you can subscribe to each frame with `requestAnimationFrame` and the browser will paint anything you do if possible.
+Esailija,995876,26653518,0,@AwakeZoldiek Can you give an example then?
+Esailija,995876,26398198,0,@MattiMehtonen My MouseEvent (TestD) is indeed fastest: http://jsperf.com/event-object/4 even when invoking the getters for both (worst case)
+Esailija,995876,26725956,0,@JukkaK.Korpela Yeah I didn't mean to imply that the `input` type testing technique carries over to anything else. It specifically works because `type` is an enumerated attribute. I have clarified this in an edit.
+Esailija,995876,26728033,0,"@FelixKling it's not slow, IIRC you can call it like 10 million times per second"
+Esailija,995876,26728833,0,@JukkaK.Korpela I didn't find anything about it except it being deprecated
+Esailija,995876,26729261,0,"@FelixKling Even if we ignore the fact that none of those are functionally equal to hasOwnProperty, the jsperf is totally unfair and irrelevant and I am working on a fix."
+Esailija,995876,26729765,0,@FelixKling Here is preliminary test that already shows that misses are more expensive than hasOwnProperty. I still need to go through disassembly to figure out why the others are still unplausibly fast http://jsperf.com/hasownproperty-vs-in/3
+Esailija,995876,26729817,0,@FelixKling btw I recommend you to come to http://chat.stackoverflow.com/rooms/17/javascript so we don't spam the comments
+Esailija,995876,26731732,0,"@FelixKling ok I finally nailed down the reason. The success functions were optimized under the assumption that the prop read always succeeds. Of course that is not the case in production, so I present you the realistic jsperf finally http://jsperf.com/hasownproperty-vs-in/3 :P (Only valid for V8)"
+Esailija,995876,26397935,0,"`(function(){})()` -> `""("" FunctionExpression "")"" Arguments` -> `FunctionExpression Arguments` -> `CallExpression` and
+`(function(){}())` -> `""("" FunctionExpression Arguments "")""` -> `""("" CallExpression "")""` -> `CallExpression`. So when you get at the AST you will not be able
+tell what the original was and thus may not generate code that defines function and calls it vs returning value or whatever you are claiming"
+Esailija,995876,26397788,0,"@MattiMehtonen your jsperf is very much incorrect, it merely tests the performance of `.addEventlistener`. See here http://jsperf.com/event-object/2 <-- same code in each test but very different results due to incorrect tests... you need to just compare pure js code instantiating a constructor instead of using DOM like that."
+Esailija,995876,26397749,0,"`""("" callExpression "")""` vs `callExpression` have absolutely no semantic difference and both evaluate to `callExpression`"
+Esailija,995876,26735563,0,"@Ian yeah I don't know either, it was just funny to me how awkward the code looks :P"
+Esailija,995876,26738529,0,This is not a practical solution though since you can't parse CSS that is referenced from different origin.
+Esailija,995876,26738732,0,"You don't need easyXDM in the first place if there is CORS. And if there is no CORS, then you cannot access the CSS without using a proxy server (which cannot then access intranet and cookies which the whole point of same origin policy). easyXDM is just tying different APIs together, it doesn't give you something that wasn't already physically possible."
+Esailija,995876,26739045,0,You can use [yahoo YQL](http://developer.yahoo.com/yql/) but it's not perfect (if css is cookie-based or hosted on cross-intranet it doesn't work)
+Esailija,995876,26743910,0,It works fine here http://jsfiddle.net/Gphmj/1/
+Esailija,995876,26397584,0,"multipass compilation and hoisting are not the same process at all, if that's what you imply"
+Esailija,995876,26399026,0,"@EliasVanOotegem What was claimed in the wiki is that the semantics differ - but according to the grammer specified for Javascript, it doesn't. The wiki even claims difference in evaluation - even though they are already the same at the grammer level... :("
+Esailija,995876,26705532,0,"@dystroy thank you, that was completely surprising and unreasonable"
+Esailija,995876,26705097,0,"This is totally incorrect, why would they have their own copies of the method?"
+Esailija,995876,26314496,0,There is no code that would add the leading zeroes - I don't see how you can expect them then. :P
+Esailija,995876,26653724,0,@AwakeZoldiek That doesn't even make sense. Why would subclassing an array break `for..in` loop even if you were idiotic enough to use `for..in` for arrays?
+Esailija,995876,26654120,0,"@AwakeZoldiek If this way has many pitfalls and quirks, why did you feel the need to come up with something like this as an example? Trying to extend a built-in is pretty hard-core thing to attempt and not advocated by me at all."
+Esailija,995876,26654234,0,@fusio why don't you try to write that taxonomy in JS with what you have learned and show it to us and maybe we will see if you did something wrong.
+Esailija,995876,26654416,0,"@JonathanLonowski I didn't notice your edit until now. Why exactly does it matter if one has to use reflection to access private? You can access it if you want and that is the end of story. I mean you could argue that it is inconvenient but with a library and static imports it's `get(obj, ""age"")` vs `obj._age`. There only remains the argument that `._age` is more possible to write accidentally. As if there was a plausible scenario where one writes that and could honestly claim it was by accident. It is in the class of ""I slipped and..."" explanations..."
+Esailija,995876,26655600,0,"@AwakeZoldiek in my experience in most questions the problem has been `this` binding with event handlers and unsurprisingly some people using variables thinking they are object properties, which I strongly advocate against with multiple researched reasons anyway. None of these problems are inherent with constructors and prototypes as shown in the answer. ""Subclassing a built-in"" is not an everyday activity or a common thing to do at all, so I feel surprised you make that as first example when there were supposed to be many pitfalls."
+Esailija,995876,26655989,0,You can take a good sample here http://stackoverflow.com/questions/tagged/oop+javascript
+Esailija,995876,26657143,0,"@fusio looks good to me although you should have made a now post possibly on http://codereview.stackexchange.com/. To answer your comment question, `_super.constructor.apply( this, arguments )` is more general than `Shape.call(this, id)`: it has no hardcoded constructor name and works for any number of arguments. Note that my method assumes Node.JS and unique file for each ""class"", the way it works on jsfiddle and with everything thrown together is different because the variables I make would be shared instead of being unique to each file."
+Esailija,995876,26659932,0,"You should move code out of tests behind static functions, otherwise you are just testing cold code and therefore the results don't necessarily reflect reality."
+Esailija,995876,26384241,0,Note that these conversions are to be thought of as abstract operations to explain semantics - not something that actually happens
+Esailija,995876,26668981,0,"@TheFrost I tried to explain - bubbling starts from bottom. When you are in a body event handler, the event has already fired on all elements that are below body. You cannot go back in time and uncall those functions... It does not matter what filter you use. `$body.on('click', 'ul li'` is therefore not a solution because it just changes the filter."
+Esailija,995876,26670716,0,"@TheFrost Let us simplify as much as possible. `$(""body"").find(""ul"")` is just the same as `$(""ul"")`. `$(""body"").on(""click"", ""a"", function(){})` is *not* the same as `$(""body"").find(""a"")...` it is the same as `$(""body"").on(""click"", fn)` but with special filtering done in `fn` when the event happens. [Events bubble from bottom to top](http://www.w3.org/TR/DOM-Level-3-Events/images/eventflow.png), so `ul` event handler will fire first. Then body."
+Esailija,995876,26674036,0,I searched the entire source code and facebook SDK definitely **does not** use the variable `$` even locally.
+Esailija,995876,26691359,0,"Why the downvote? Yes, you should encourage vague and imprecise answers!"
+Esailija,995876,26694843,0,Not adding the listener twice can be achieved by not adding the listener twice
+Esailija,995876,26694923,0,Make your loop condition so that `i` will never be out of bounds... ?
+Esailija,995876,26695315,0,@CrazyTrain sure. And even in that case still the cause of the disease needs to be fixed (crazy code that uses undefined array indices) and not pepper the code with annoying work arounds. There has been only one use case for array with holes... when you semantically don't actually need an array or when implementing a hash table.
+Esailija,995876,26315818,0,@Mageek ah ok then. I cannot remove my dowvote until edit though
+Esailija,995876,26315931,0,Lol of course the fact that `:not` was being used was ninja commented silently on the question comments
+Esailija,995876,26620359,0,This is the simplest way and even has one-to-one relation with his original html
+Esailija,995876,26620064,0,"It is numeric base-2 representation, not digital bits.. maybe that helps. If you want digital bits with all ones, then you write `int a = -1`."
+Esailija,995876,26470694,0,"`.innerHTML = """"` should realize that it only needs to clear the element content. And it clears the content in native code, whereas the while loop constantly crosses js/dom boundary. So we should expect it to be faster. We could verify this from e.g. webkit source."
+Esailija,995876,26511586,0,"@Paulpro First of all, I didn't mention any bug. Secondly, if a function doesn't use any variable outside of it, it won't keep any context alive. Thirdly, if variable is not referred to by any inner function, then it is not context allocated unless there is another problem (like using direct eval)"
+Esailija,995876,26470464,0,@Juhana especially when your app only ever does that operation once per click or something :D
+Esailija,995876,26468125,0,"yea jsperf is actually really hard (or well, unintuitive) to use if you want correct results"
+Esailija,995876,26467862,0,"almost there, don't put code in setup and do work in the function http://jsperf.com/custom-vs-map/2"
+Esailija,995876,26530425,0,"@user2245634 they are technical explanations how something should work. To use [[Get]] Operation of `F` with property name `""prototype""`, you just do `F.prototype`. `[[Get]]` Operation is also explained separately in the specification."
+Esailija,995876,26491473,0,"These are not equivalent, the setting of a property might fail which leaves `d` in different state than it is left in first snippet"
+Esailija,995876,26465967,0,"btw, the jsperf couldn't be more misleading and incorrect :("
+Esailija,995876,26532018,0,"@Jacob please hand out the bounty before the grace period ends, otherwise I only get 50 points :P The 100 points were already deducted from you so you will not lose anything."
+Esailija,995876,26532675,0,Use the same font or webfont for them
+Esailija,995876,26532853,0,"@deceze that's not true that these *radical* differences are just because of font rendering differences, it just depends on the font used and especially if he hasn't specified a specific font either."
+Esailija,995876,26532912,0,@EdwardTanguay I mean use a custom font that is the same for all... look at github... they use font icons but they look the same.
+Esailija,995876,26532948,0,@deceze the 100% is already impossible even on something like a hex color though :P
+Esailija,995876,26318107,0,It doesn't accept the empty string though.. not sure if that was important in the original
+Esailija,995876,26465845,0,"Variable name length doesn't affect performance so you didn't relaly have to minify it :P But yes, Array.prototype.map involves far more convoluted semantics than a common sense loop so it's slower."
+Esailija,995876,26537342,0,@poitroae done :P it will be in `$_POST['extension']`
+Esailija,995876,26465688,0,"@C5H8NNaO4 and ben Since it can be implemented trivially in user code, that is pretty irrelevant. A more correct thing to say is that it doesn't work **out of the box** in IE8. Stuff like File IO is **truly** unsupported in IE8 and should be differentiated."
+Esailija,995876,26511117,0,@DavidBarker you just need one global to avoid that: [`define`](http://requirejs.org/) :P
+Esailija,995876,26511070,0,@Bergi what are you implying? My post says that typical library will expose at least one new global
+Esailija,995876,26511034,0,@JoshJanusch it easily makes a difference in games and physics simulations for example but in average applications yeah :P btw `['name']` is same as `.name` the problem is when `[variable]` because it has dynamic semantics
+Esailija,995876,26509730,0,"Not relevant to CSS but if you use a mixed bag of 3rd party libraries, and if they didn't follow the language's standard conventions (for stuff that leaks out in API), you would be forced to write like a team of 15 monkeys even if you were writing the project alone lol."
+Esailija,995876,26507122,0,"@nnnnnn text inside a button is selectable too, isn't it?"
+Esailija,995876,26507601,0,"A good argument against some conventions is when they go against the standard way in a given language, like underscores in CSS or camel case in python... so for that reason don't use underscores in CSS."
+Esailija,995876,26500395,0,"@ankit337 The simplest way to explain it is: when you pass crap in, you get crap out. For example, if you wrote incorrect html, then the result will appear most likely differently in every browser."
+Esailija,995876,26500870,0,"@MatteoTassinari you said attributes are not nodes, that's not correct"
+Esailija,995876,26508441,0,"If you want privacy do not do any critical changes, simply do just enough replacing that privacy is retained but so that nothing meaningful is changed."
+Esailija,995876,26509166,0,"@Ian err, HTML has dash convention too. That's how. What I am saying, when a convention is in conflict with the standard convention of the given language, then that convention will pretty much negate all benefits of having a convention in the first place."
+Esailija,995876,26509556,0,@Ian Actually html seems to have allwordstogether (`formnovalidate`) and mixed dash (`data-`). Dunno where underscore for id comes from :)
+Esailija,995876,26502595,0,"@FelixKling In module pattern you would immediately invoke it as it doesn't make sense to require clients to call a function for nothing. You should be able to just `var module = require(""module"");` instead of `var module = require(""module"")();`"
+Esailija,995876,26514461,0,Java and C# have flexibility too in that the checks are not enforced at runtime and one can use reflection if he needs to access private.
+Esailija,995876,26502719,0,"@Walex I mean this works out of the box without requiring separate ""inheritance library"""
+Esailija,995876,26510231,0,"@Artemix before we waste any time, how often in your application would you need to do these property reads? Like if the algorithm performs now 50 static reads but would perform 50 dynamic reads with the refactoring, and you call the algorithm 50 times per second, that would be 2500 times per second (And in this example the numbers are so low that you would be wasting your time thinking about this)."
+Esailija,995876,26471694,0,"It does create a fragment from the ""html"" but when attempting to insert the fragment, there is [fast path to remove all children](https://github.com/WebKit/webkit/blob/master/Source/WebCore/editing/markup.cpp#L1086)"
+Esailija,995876,26510445,0,"@Artemix Then don't worry about it. You will enter frame maybe 60 per second maximum, right?"
+Esailija,995876,26502857,0,@Walex I have added example of a little bit cleaner way when you have separate code
+Esailija,995876,26510600,0,"@Artemix Yeah, forget about it. Come back when you need to do 100 000 reads in 16 milliseconds :P"
+Esailija,995876,26503440,0,@Ashesh I am not surprised. See http://www.w3fools.com/
+Esailija,995876,26465199,0,"I don't know why many instances of this would be required, these should be just merged into a single function call because that's how it is used, you never do anything with the object except call that one method and throw it away, that's a red flag where a single function simplification is warranted.  Because of the hardcoded string selector the context of this class is extremely unreusable too. But +1 for the answer itself as prototype is how you get full benefits of Javascript object model."
+Esailija,995876,26460020,0,hmm is there some problem behind this?
+Esailija,995876,26317125,0,That is already possible (just use some randomly generated string as the key) but it is absurd to take stuff that can be enforced statically to the runtime
+Esailija,995876,26611653,0,"Access modifiers don't control access in Java, you can access private anytime if you want e.g. through  reflection. Therefore it doesn't differ from python in that sense."
+Esailija,995876,26574707,0,The intent is `this.index = (int32)index`. `+this.index` doesn't do anything to something that is already a number.
+Esailija,995876,26447395,0,@zerkms that was explained right below... because it was not part of the algorithm and didn't find nicely in the rounds format. The most relevant insight about that is that a boolean object is not considered a boolean in anyway.
+Esailija,995876,26447356,0,"yeah I don't know what to say, the edits have mostly just added bolding too, so the answer was not in downvotable state at any point"
+Esailija,995876,26610843,0,"@arachide Try this, it will not waste any  memory http://jsfiddle.net/SPXwZ/ and has everything about a class in one place :P"
+Esailija,995876,26447248,0,@bfavaretto oops yea you're right :D
+Esailija,995876,26611190,0,"Access modifiers don't control access, it is always possible to access private outside the class if you want through reflection. Though I realize that isn't the case here but something you probably also didn't know."
+Esailija,995876,26611275,0,"C# does not enforce privacy, you are able to access private in C# as well via reflection."
+Esailija,995876,26447222,0,"@bfavaretto nope, type(x) *is* object, whereas y was already converted to a number in first round"
+Esailija,995876,26447449,0,@zerkms ok done that now
+Esailija,995876,26611846,0,The methods that work on any object are documented in the specification as generic methods. You can directly copy a reference to them to avoid creating your own implementation. E.g. `List.prototype.add = Array.prototype.push`. or `NodeList.prototype.each = Array.prototype.forEach`
+Esailija,995876,26613312,0,"Security Manager is not relevant because that is what the user of the application runs, not something that a developer has control over. I don't care about the implementation, at high-level, in Java as well in Python, one only communicates privacy and in both cases anyone can break it if they want to. Whether something is in the language or the language standard API is completely irrelevant to this."
+Esailija,995876,26613601,0,"So let me rephrase this all: The Python way is already sufficient to prevent any accidental access of internals as communicated by the author with underscores and what not. There is really no plausible scenario where someone
+could bypass this system by honest accident. If the intent is deliberate, then it doesn't matter if one has to prefix underscore or use reflection (which can be made convenient with a library)."
+Esailija,995876,26613704,0,I actually got to read your post to end and it's pretty good. I cannot change my downvote to upvote now because it is locked down :( (needs edit to unlock). I just had to stop reading when it seemed like you thought Java had enforced privacy and made Python look hackier.
+Esailija,995876,26434359,0,Rarely do you need to iterate over object that is OOP object and not semantically being used as a dictionary. In fact serialization is the only thing that comes to mind and in that case it is more convenient just to define a `toJSON` method
+Esailija,995876,26316107,0,"@Ian it was never removed http://jsfiddle.net/7bXSS/, but once the jQuery object is in state where .selector doesn't make sense, the property is deleted whereas before there was a bunch of meaningless `findAll()` etc in the string."
+Esailija,995876,26493629,0,@gokul Translating human languages automatically is simply impossible. I mean you can try with google translate but the result is unacceptable for anything else other than some cheap laughs.
+Esailija,995876,26574384,0,"It doesn't have to be physical object, abstract concepts are just as ok too and in fact far more common probably."
+Esailija,995876,26451316,0,"@MuhammadUmer [monkey **patch**](http://en.wikipedia.org/wiki/Monkey_patch)... you don't have to know the exact term to describe it... I just use it because it's shorter to say in comments.. When you were asked what problem you wanted to solve the problem was ""I want my code to run when someone anywhere sets `onreadystatechange`"", that's not too long to explain."
+Esailija,995876,26548313,0,"@Jacob after the grace period it would, but only with 50% of the points"
+Esailija,995876,26492158,0,Do I have an example of what? A property assignment failing?
+Esailija,995876,26548384,0,"@Jacob to discourage sniping I guess, often impossible questions have bounties and then just before expiration, someone can make an answer and have it upvoted by a friend or two. Then he will receive the bounty for nothing."
+Esailija,995876,26548508,0,"@Jacob the bounty is not related to accepted answer, if the bounty giver doesn't hand out the bounty, then it will automatically be handed to the one with most upvotes (since the question was impossible, there will only be one answer by the sniper) see http://meta.stackexchange.com/questions/16065/how-does-the-bounty-system-work"
+Esailija,995876,26548752,0,There could be invisible characters like BOM.. also don't mix types in an array.
+Esailija,995876,26549097,0,"@RocketHazmat yes, just run it through your console. Or add conditional break and see the alert execute when the condition is false."
+Esailija,995876,26549177,0,Only put functions on the prototype
+Esailija,995876,26457477,0,"The issue is the server side code, not the Javascript"
+Esailija,995876,26550615,0,@Jacob ah I see
+Esailija,995876,26492174,0,"I think that is fine, what I was referring to is the value/reference distinction in the second paragraph. What is returned is the return value of the expression on the right-hand side."
+Esailija,995876,26451466,0,@MuhammadUmer I find that is only true when something is not explained in clear terms... *always* take all questions in comments seriously and add more detail to your question before it gets closed.
+Esailija,995876,26451697,0,@MuhammadUmer not a video but see http://msmvps.com/blogs/jon_skeet/archive/2010/08/29/writing-the-perfect-question.aspx http://catb.org/esr/faqs/smart-questions.html http://sscce.org/
+Esailija,995876,26551182,0,"Well your ""own"" CDN can go down too?"
+Esailija,995876,26551512,0,"@roguequery not even using a CDN at all? Now that's lunacy. Yes it will do *much* better, that's why CDNs even exist."
+Esailija,995876,26552677,0,It should inherit from `IPoint` and remove the `IPoint.call` :P
+Esailija,995876,26553076,0,Does mixin mean pointless duplication of functions on the objects? You said it yourself that it should be applied on the prototype
+Esailija,995876,26451550,0,@MuhammadUmer the FAQ specifically says not to go away when asking a question because the most activitity is in the first 5 minutes and you must be there to answer all questions about detail.
+Esailija,995876,26451506,0,@MuhammadUmer consider this question http://stackoverflow.com/q/7775767/995876 exactly the same problem (with `.open` instead of `.onreadystatechange`) but he explains the problem directly... no downvotes or closure
+Esailija,995876,26751771,0,What jQuery version
+Esailija,995876,26397457,0,"Yes, that's my point. It means something **entirely different** in any other language. E.g. you don't say a method is hoisted in Java when you are able to call it before it's declaration, that would be ridiculous but in Javascript it's ok to confuse these terms (hoisting applies as its actual meaning as well when discussing optimizations in javascript) :P </rant>"
+eis,365237,26343029,0,can you please explain what exactly you have done. *How* have you included the jar in your project? what is your pom like? is your project mavenized?
+Vincent van der Weele,2095090,26707151,0,"@Obicere you're mixing two things there. In this case, a singleton is not the best option. But if it were, an enum would be totally fine to implement that singleton."
+Vincent van der Weele,2095090,26530878,0,"Do you also want to insert the periods after each item, or is that a typo?"
+Vincent van der Weele,2095090,26532115,0,"I already +1'd for pointing out the problem, so unfortunately I cannot +1 for the solution any more ;)"
+Vincent van der Weele,2095090,26534394,0,"@DraconianTimes You're right. I initialized `right` to `1` now and the output is correct, besides, I added some scaling to create a nicer picture (see the printscreen)"
+Vincent van der Weele,2095090,26536265,0,"@x4rf41 potentially they could, but I don't like that conceptually, because the device and session are not really siblings in the ""real world"". They don't really share an interface either, because the session works on a higher ""level of magnitude"" (or however that should be called)"
+Vincent van der Weele,2095090,26536427,0,Nice! I like this approach!
+Vincent van der Weele,2095090,26536787,0,"Thanks, this looks useful too :) And yeah, I'm a Java guy, I always need some post-processing to update my field and public method names ;-)"
+Esailija,995876,26335068,0,"There are libraries for tweening, the tweening part is reusable and what is tweened is application specific"
+Vincent van der Weele,2095090,26547782,0,"@SwiftAppDesign well, no, its value is `Type text here...`, of which the first space gives the exception."
+Vincent van der Weele,2095090,26569420,0,"@Eldar yes, you pass an instance of `Record` in the constructor of `Storage`, but you never use it there (because it is not logical to have that parameter in the first place, that's what `addRecord` is for). Just remove the parameter."
+Vincent van der Weele,2095090,26569524,0,"@Eldar did you read my comment at the other answer? Storage does *not* want an initialization parameter. You put it there, for no reason. Just remove it."
+Vincent van der Weele,2095090,26570719,0,"@putvande this is no duplicate, OP says he does *not* want to use jQuery"
+Vincent van der Weele,2095090,26573597,0,"This is a bad pattern. `A` explicitly depends on `B` and `B` explicitly depends on `A`. This kind of circular references are never necessary. For instance, pass only the relevant parts of `A` to `B`."
+Vincent van der Weele,2095090,26576211,0,"You need a permutation of your enum, rather than picking random elements independently. Have a look at [how to generate a random permutation](http://stackoverflow.com/questions/5505927/how-to-generate-a-random-permutation-in-java)"
+Vincent van der Weele,2095090,26623702,0,"Why don't you simply have `Map<String, T> faces`?"
+Vincent van der Weele,2095090,26495431,0,What is exactly the pattern you have? To me it seems that your regex is tailored to this very example.
+Vincent van der Weele,2095090,26649115,0,possible duplicate of [How do I compare strings in Java?](http://stackoverflow.com/questions/513832/how-do-i-compare-strings-in-java)
+Vincent van der Weele,2095090,26650940,0,"Based on the hint by eclipse, the error is not in the code you showed us. The only place where you use `valueRSSI` it is correct."
+Esailija,995876,26330873,0,"@user1074378 the `location.href` automatically handles that, `encodeURIComponent` cannot be used on entire uris, just uri components (hence the name). You would call `encodeURI` - but because the encoding was already handled, that would just double encode and break everything."
+Vincent van der Weele,2095090,26521937,0,"@DomenicoToscani well, finding the direct subclasses is not easier than all subclasses. A super class doesn't store any information about its subclasses, so the only way to find them is by inspecting all classes on the class path (whether you like that or not ;-) )"
+Esailija,995876,26331136,0,@user1074378 yeah I cannot guarantee that this will even fix what you are experiencing but it was definitely wrong in your code
+Vincent van der Weele,2095090,26404020,0,I don't think this is a good pattern. Why don't you just perform your loop on a background thread?
+nrz,1310991,27053940,0,How about using `add` instruction?
+juancamilo87,1386160,26291486,0,I already tried it but it doesn't scroll. :/
+Esailija,995876,26353448,0,"@mart1n `\a` is literally just `\a` in html. There is no `\a` escape in javascript either. If you want your input to have actual bel character then you need to write actual bel character, or use `&#7;`"
+João Nunes,1393275,27129262,0,how to make it scale aware?
+Esailija,995876,26352819,0,"Your entire post appears to be about performance when calling canvas functions with invalid parameters. And then you assume these same things carry over to physical drawing outside viewport, which cannot be even measured with a timer like that since drawing only happens when the JS execution yields."
+Alex Hutchinson,1528052,26543127,0,"The altField is showing date and time due to the fact that the dateTimePicker is showing inline in Div #dateTimeField, and I also want to display the date and time in a TextBox, hence the use of the altField. I'm open to better suggestions tho :)"
+Alex Hutchinson,1528052,26570029,0,Awesome! Exactly what I wanted to achieve. Thanks so much.
+Vincent van der Weele,2095090,26454172,0,beat me by 40 seconds ;-)
+Vincent van der Weele,2095090,26490770,0,@It'sNotALie. Can you implement methods in an interface?
+Esailija,995876,26351342,0,Model your problem with objects or anything but not a string... You can always trivially get a string out of the object model if you need one.
+Vincent van der Weele,2095090,26471102,0,"@Geobits I think that depends on the intersection check. If you use the cross product, isn't it easy to find the border cases? (in `[0,1]` means intersection, so exactly 0 or 1 means a border case?)"
+Esailija,995876,26350426,0,"Time complexity is really useless here, O(1) can mean hundreds of instructions if we are talking about hash table
+or it can mean 1 instruction if we are talking about array access O(1)...."
+Esailija,995876,26349853,0,"This is the wrong problem, your problem is how those strings are generated, a space should be `%20`, not a `+` or even `%2b`"
+Vincent van der Weele,2095090,26502456,0,"But why is the first method called then? If `T` in `\\1` is the same as `Collection<? extends T>` in `\\3`, then `found` in `\\1` must be of type `Collection<? extends <Collection<? extends T>>` in `\\3`? Where am I wrong?"
+Esailija,995876,26312785,0,what type is `data`
+Vincent van der Weele,2095090,26490187,0,So what's wrong with your attempt? What does it output?
+Lauri Harpf,843984,27163796,0,"The ""java.lang.NoClassDefFoundError: javax/ejb/EJBLocalObject"" exception occurs already when creating the dependency; so when I do ""Dependency dependMock = PowerMockito.mock(Dependency.class);"" in the test code, the exception is thrown. Thus, while these points are useful, they do not unfortunately resolve the issue."
+Vincent van der Weele,2095090,26728288,0,"@m0skit0 Does that really matter? There's quite a lot going wrong in this code, but the question seems pretty straightforward. I assumed `setNucleusType` is simply the setter of `nucleusType` in `RSTRule`."
+Esailija,995876,26772315,0,The statements `duck.quack()` and `quack(duck)` are completely different.
+Vincent van der Weele,2095090,26766629,0,"It feels like you have relational database background and ""think in tables"". Try to get rid of that if you want to work in an object oriented way."
+Vincent van der Weele,2095090,26944371,0,"Many questions arise here... Is the string always like this? I mean, this looks like the config of 3rd party application. Are you sure that the snippet `Month=str_to_date(TRIM(@Month)), '%d-%m-%Y')` is always there? And slightly off-topic: what does it mean? What is the expected result of formatting `April` as `'%d-%m-%Y'`, for instance?"
+Vincent van der Weele,2095090,26944471,0,Who initiates the start of `End`? Do you create the intent in `MainActivity` or do you use some other way?
+Vincent van der Weele,2095090,26944937,0,"@pingboo23 So, if I understand correctly, you already have an intent `i` for `End` and when the user finishes the task, you call `startActivity(i)`? Then, just before that line, add `long timeElapsed = SystemClock.elapsedRealtime() - chrono.getBase();` and `i.putExtra(""timeElapsed"", timeElapsed)`."
+Vincent van der Weele,2095090,26945163,0,"@pingboo23 yes, there you call `getIntent().getExtras().getLong(""timeElapsed"")` and use it however you like (or simply `getIntent().getLongExtra(""timeElapsed"", 0L)`)"
+Arttu Peltonen,1629346,27126067,0,"Oh right, if you made those changes, you'll also need to replace the `5` with a `8` on this line: `if (findConfigAttrib(egl, display, configs[i], EGL10.EGL_RED_SIZE, 0) == 5) {`. Looping through all returned formats shouldn't be required here though, you could just use the first unless you're picky."
+Arttu Peltonen,1629346,27088779,0,No problem. Let me know how it works out!
+Arttu Peltonen,1629346,27079597,0,"I don't think there's anything similar to GLU library for EGL afaik, you'll probably have to do that manually anyway. But again, there's only a few errors to handle."
+Vincent van der Weele,2095090,27190453,0,"@Kowser there is no probability at all in a deterministic algorithm. I generate **all** possible distributions, which is equivalent to the OP's code. Can you point out where it was mentioned that we need to generate one solution uniformly at random?"
+alcedine,1492838,27059556,0,"Is the code properly indented to begin with, in relation to the place you're taking it from? That is, do you need to actually check every line separately, or is it enough to increase the indent level by one?
+
+If all you want is to increase the indent level by one on every line, in vim you could just visually select them and `>`. If you're going to be yanking/pasting those lines somewhere else, you'll need to select them for that anyway."
+buggedcom,194480,27104110,0,@fancyPants - that's what I was thinking but am hoping there is some mid level solution that doesn't mean updating my schema.
+eis,365237,26306947,0,"...""static is like free sailors which are floating on sea""? what?"
+eis,365237,26311399,0,I think you could add is there a reason to go with the fastest way - do you believe that other methods would cause bottlenecks? How much faster would it really be? Why?
+eis,365237,26338418,0,"@Envious I hope you noticed that 2 of links I provided were related to answers and 2 for questions, so they are of benefit to read also for answering."
+eis,365237,26339288,0,@abhishekhp you could add that as an answer and mark this as answered
+eis,365237,26348090,0,can you give some concrete examples which classes is your project missing?
+alcedine,1492838,27027343,0,"Irek, I made some modifications that I think will solve your problem of running out of memory. See if it does it for you."
+alcedine,1492838,26628021,0,"Oh, no, I thought that line was yours. Nevermind then."
+Vincent van der Weele,2095090,26904582,0,"@OlayinkaSF The diameter `d` of a tree is the length of the longest path between two leafs. Consider the middle node `m` in that path (assuming `d` is even; if `d` is odd, there are 2 such nodes). The max depth from `m` is `d / 2` (its max depth has to be found along the longest path, or we would have a contradiction and some other path would be longer). For every other node, the max depth is at least `d / 2 + 1` (route it via `m` and then to one of the ends of the longest path). Hence, `m` is a graph center and the value you search for is `d / 2`."
+Vincent van der Weele,2095090,26889972,0,What do you mean that the parent pointer is given? Do you have a list of all leaves? That is not a very logical data structure...
+Vincent van der Weele,2095090,26851739,0,"@AndrewMartin No, he hasn't, he removed `int order` from the method signature."
+Vincent van der Weele,2095090,26806402,0,"I'm confused about this sentence: ""I am trying to pass the current instance of class#A to class#B using this but that just passes the context so the functions are not recognized."" That seems to be false."
+Vincent van der Weele,2095090,26769862,0,"@Servy we cannot use `Max` here directly, because we need to compare the `Count()` values. I agree that this is not an efficient solution, but the OP explicitly stated that efficiency is no issue."
+Vincent van der Weele,2095090,26770056,0,"@Servy that is false too. `.Max(seq => seq.Count())` gives the maximum size, not the enumerable having that size."
+Vincent van der Weele,2095090,26774452,0,"The problem with this approach is that `MyBean1` does not extend `SuperBean<MyBean1>`, so it cannot be used in `AbstractService`."
+Ope,184470,27180983,0,"OK, I do stand corrected: This is then by design. It is not so clear from DefaultValueAttribute documentation, but PropertyDescriptor.ShouldSerializeValue says the intention pretty clearly. For my case, what then makes most sense is to create a new attribute e.g. UserDefault because that is quite simple refactoring even if it touches a lot of classes - there is less chance for mistakes in the future objects than with ShouldSerializeFoo(). It also better shows the intent: This is the default value when the user (not constructor) creates a new object. But thanks!"
+Vincent van der Weele,2095090,26782817,0,"@Bergi ah yeah, I totally missed that requirement. My guess is that an in-place algorithm cannot do better than `O(n^2)`."
+Vincent van der Weele,2095090,26793455,0,"Tnx, forgot the colon..."
+Vincent van der Weele,2095090,26794131,0,"@bowmore it is, right? Or am I confused with `Collections.sort`?"
+Ope,184470,27179002,0,"@jbl Yes, this is what I do in the UI tier. But I cannot do it after the XmlSerializer.Deserialize because I do not know whether Foo=0 because it was not serialized or because it was set by the user as 0. Going this way, I would need to plug into the serializer before the Deserialization happens. And do not know how (except in contructor, which I do not want to do because of large amount of classes)."
+Vincent van der Weele,2095090,26851415,0,what about the result in java? You can't assign a boolean to a char
+Vincent van der Weele,2095090,26834047,0,"What would it mean to have overlapping dates? I'm a little bit confused about the exact requirements now. I expected that a query `(start, end)` is valid if `start` matches one of your start dates and `end` matches one of your end dates. In that case, I thought that your value would simply be the sum of all intervals starting after `start` and before `end`. Is it more complicated than that? Can you elaborate?"
+Ope,184470,27178252,0,"As I said above: ""I have potentially hundreds of business classes with default values used in the UI tier (Views), so default value initialization in constructor is not an option."" I am using the attribute in the UI like the property-grids etc. did in the old WinForms era."
+Arttu Peltonen,1629346,27189832,0,"Default framebuffer is where you render to by default, you don't have to do anything to get that. Framebuffer _objects_ are what you can render to instead, and that's called ""off-screen rendering"" by some. If you do that, you end up with your image in a texture instead of the default framebuffer (that gets displayed on-screen). You _can_ copy the image from that texture to the default framebuffer (on-screen), that's usually done with blitting (but it's only available in OpenGL ES 3.0). But if you only wanted to show the  image on-screen, you probably wouldn't use a FBO in the first place."
+Arttu Peltonen,1629346,27128754,0,"Well in that case, why are you using `EGL_OPENGL_ES2_BIT`? Your code even states ""Requires that setEGLContextClientVersion(2) is called on the view."""
+Vincent van der Weele,2095090,26847902,0,"@Manav the role of a node (`T1`, `T2`, or `L`) is entirely determined by its number of children. When removing a node `t` of type `T1`, only the set of children of its parent changes. Since `t` is replaced by `child(t)`, `parent(t)` still has as many children, so its role does not change."
+Vincent van der Weele,2095090,26848628,0,See http://stackoverflow.com/questions/25282/how-would-you-implement-a-hashtable-in-language-x
+Arttu Peltonen,1629346,27126352,0,"That's odd, since it sure looks like you would get an exception before that loop if numConfigs had remained at zero."
+nrz,1310991,26342281,0,Related: http://stackoverflow.com/questions/12476548/checking-up-intel-assembly-opcodes-easily-in-linux
+Sampsa,1221196,26580570,0,"npm-based modules. It is specifically for only this compass problem that we require compass, which is only distributed as a gem. There are node wrappers, but all of them use the gem as their basis."
+Roman Susi,1133649,26843703,0,"Yes, I have not even considered using numeric keys, because using keys or attributes makes the format carry it's context. If for some external reason one must use positions in lists or tuples, then names could be defined for positions, e.g. companies[0][COMPANY_PRICE]. Namedtuples are mentioned in one of the answers too."
+Esailija,995876,26353613,0,Different port is different origin
+Esailija,995876,26815029,0,"Don't use stuff like ´jQuery.map` on an array with 48 million items.. that's just ridiculous. Also, forget about web workers since they require not only copying but serialization. It will be 10000x faster to just directly loop through the array in the main/ui thread."
+Esailija,995876,26815154,0,Look at this for example http://jsfiddle.net/VjZnn/1/ 150 milliseconds to increase every value by 1. It would take years to serialize that array to json just to pass it to a web worker
+Esailija,995876,26816113,0,"I don't think it's obvious to everyone but there is no sense in debating the actual code since one should define a function and then just call that like `value = optional(value, false);` or whatever. DRYYYYyyyy"
+Esailija,995876,26817273,0,There is no such concept as endianess of literals.. in any language
+Esailija,995876,26820932,0,@user2690527 cos it is - it is always same result for that regardless of endianess thus endianess is not relevant
+Esailija,995876,26829340,0,"@ItayMaman that doesn't change things too much :P Even though it would be better to make the DB driver return `Docs`. If you are using Mongoose, define the schema using Doc objects and so on."
+Esailija,995876,26356597,0,"Btw, you are not saving any memory this way. The function must be defined outside. The problem is that functions in Javascript are first-class, so anytime you mention `function(){}`, you need to create the function object - even with code sharing the object is expensive and what causes the heavy use of memory."
+Esailija,995876,26364135,0,@GolezTrol err.. it works just fine as the op put it http://jsfiddle.net/YTEAb/
+Esailija,995876,26837199,0,"@user2690527 the shift is not performed in the memory, but it is first loaded from memory into a CPU register (where endianess is irrelevant since you cannot address the register in bytes). It will therefore have same logical result (62). The number 62 itself is then stored in memory with endianess dependent format."
+Esailija,995876,26837345,0,@user2690527 I have found some articles for you so you can understand when endianess matters http://en.wikipedia.org/wiki/Endianess http://www.cs.umd.edu/class/sum2003/cmsc311/Notes/Data/endian.html
+Esailija,995876,26355521,0,@CrazyTrain If you put it that way - a very minor convenience - then I agree. So far I have never needed this convenience though because I use object.create just to link prototype chains. My original comment was about every-day object creating using object.create - nobody uses the second argument in that case but they use a initializer function. And so far I only know that Raynos does this. lol
+Esailija,995876,26875612,0,"@YuryTarabanko thanks, I added it :P Paul S. yea I added that as well thanks"
+Esailija,995876,26355427,0,@CrazyTrain yes but when I use those I have very special situation where I actually need to alter descriptors. Not every-day normal object creating which Object.create second parameter attempts to be.
+Esailija,995876,26877465,0,"Well to be fair, prop checks would eliminate the sole reason people used for..in for arrays in the first place: typing convenience. Why not rather introduce them to the wonders of text editor/IDE macros?"
+Esailija,995876,26878191,0,@Justin What array? There is not a single array in the entire code.
+Esailija,995876,26878370,0,It seems the challenge text is purposefully setting up the user for a failure.
+Esailija,995876,26878737,0,"@Saul `NodeList` is not an `Array`. `Array` is a JS object while `NodeList` is a host object which are from completely different worlds. What IE9 is doing is overly liberal interpretation of the spec, it is completely valid for `for..in` to work on XML `.childNodes` but not on HTML `.childNodes`."
+Esailija,995876,26356729,0,"You say he is doing inheritance wrong, and then move everything from the baseclass to the subclass and thus don't inherit anything. And if you tried to inherit from SubClass now, it would not work because the methods will be always tied to a specific instance instead of being generic. :I"
+Esailija,995876,26356827,0,"the variable is now static, all instances will share it instead of having their own copy."
+Esailija,995876,26357397,0,"Yes but even one function object already has more overhead than having to create context object. With 30 methods, you create 30 of those. The context object is a bucket in the ocean compared to function objects, which you can avoid creating by simply moving them outside."
+Esailija,995876,26786307,0,"@AaditMShah that is pretty neat although other acceptable solutions are available at no performance loss but that is indeed best on the ""API"" side :P"
+Esailija,995876,26775813,0,"Your understanding is wrong and  was corrected in your previous question... (more specifically, in my answer)"
+Esailija,995876,26775854,0,possible duplicate of [what is the result of 'x modulo y'?](http://stackoverflow.com/questions/18256823/what-is-the-result-of-x-modulo-y)
+Esailija,995876,26397378,0,I cringe at the term hoisted... why is such terminology not used in other languages
+Esailija,995876,26380308,0,"Dynamic evaluation is very useful and can be used to gain significant performance boosts. Using `Function` doesn't cause your code to be dynamically scoped either like `with` and `eval` do,."
+Esailija,995876,26396122,0,@MattiMehtonen here's even better example that should perform the best if you don't retrieve any properties because they are retrieved lazily through a getter http://jsfiddle.net/mtjhm/1/
+Esailija,995876,26785265,0,"@Guffa and this is just trying too hard: `this.splice.apply(this, [this.length, 0].concat(this))` :p"
+Esailija,995876,26785869,0,That is not the point but affecting the inlineability of a function. Its effects cannot be looked at like this because it's an enabling optimization which can radically change the code that runs because the compiler can see much more at once
+Esailija,995876,26387961,0,You simply just perform the bitwise operation on the integer you already have - no conversions at all.
+Esailija,995876,26358041,0,"Yeah I don't have problem with that. But what I believe the OP talks about is outside viewport of the browser, not outside boundaries of a canvas element. I feel like you just can't carry the assumption from canvas functions to the browser viewport and CSS."
+Esailija,995876,26798997,0,@Joshua and where in that scenario does a hex string come in ? :P It looks like you can do fine with the code point value as a number
+Esailija,995876,26799443,0,"It looks like you will be using ""private variables"", then prototypal inheritance doesn't work (nor does anything else that works on object properties)"
+Esailija,995876,26800823,0,@Joshua Any reason you are not just doing something like http://jsfiddle.net/gaTR9/
+Esailija,995876,26802085,0,Isn't this in the class of typo questions?
+Esailija,995876,26802106,0,It could be that OP has too minimal understanding or has understanding but made a typo-like mistake. :P
+Esailija,995876,26359556,0,"No, just a question to challenge quick assumptions that they are truly the same. I really had no idea but it could have been a possibility."
+Esailija,995876,26359381,0,But wouldn't there be a difference in the internal capacity?
+Esailija,995876,26880481,0,"No they are not, and it's incredibly hard to make a correct and fair benchmark unless you are intimately familiar with engine internal specifics"
+Esailija,995876,26880858,0,"Well it can, the optimization is just not done. Knowing the fixed layout of dynamic objects is what all engines do as a necessity to even compete."
+Esailija,995876,26880958,0,"@Tushar that is false, unless you do something really funky with your array, it will be backed by normal ""C array""-like construct."
+Esailija,995876,27150586,0,"You misunderstood, I said there is no reason knockout to have this limitation because if state can be stored in a closure, it can be stored on the object too. You showed me jsfiddle with actual knockout which of course doesn't implement it. My jsfiddle simply showed a skeleton API that would make it possible to share functions."
+Esailija,995876,27107194,0,"Convert to HSL, reduce L, convert back to RGB"
+Esailija,995876,27137569,0,I don't know knockout but what exactly makes the functions instance dependent? If data is stored on the object then there is no need to create the functions separately for each object.
+Esailija,995876,27138278,0,"[Please `""use strict""`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode)"
+Esailija,995876,26353808,0,"@thomas no, `\a` is unrecognized in Javascript. `/\u0007/` will match it though"
+Esailija,995876,27140440,0,@MattJohnson see http://generatedcontent.org/post/59403168016/esintlapi if you didn't already
+Esailija,995876,27146405,0,"Actually that is just knockout idiosyncrasy and not a real limitation. There is absolutely no reason it couldn't use something like this: http://jsfiddle.net/Y6Dds/ (yes, some people could consider strings awkward but Ember gets away with that just fine)"
+Esailija,995876,27147778,0,"`.firstName()` is the method, something like `__firstName$` (or whatever mangling you prefer) is the actual data stored on the instance, accessible through `this` based on the string `""firstName""`. A function that only uses `this` and locals can be shared whereas closures cannot."
+Esailija,995876,27165328,0,This. Plus also functions mentioned inside other functions (that are not IIFEs) is also common abuse that burns a lot of memory and is easy to miss.
+Esailija,995876,27064147,0,V8 uses a subset of C++ that doesn't incorporate c++ exceptions.
+Esailija,995876,27179155,0,Any user function is always worse because user function cannot do identity comparisons.
+Esailija,995876,27182424,0,How utterly unrelated to oop
+Esailija,995876,27183080,0,"You really want to type `goat.type` (and more) at all call sites? Also what if you want to change it, it would be harder to refactor. This is just hideous. In before someone says ""create a factory"" in which case you are just doing glorified constructor+prototype."
+Esailija,995876,27183426,0,"@DavidMurdoch There is no optimizations done such as dead code removal because the function disabled optimizations by mentioning `with`. Before such optimization could happen, they would have to start supporting `with` in their optimizing compiler, which I already said would be lunacy in the first place because the philosophy is to support reasonable code. `with` is pure evil and even syntax error in strict mode, not reasonable code that people will hurry to optimize. But it's your best bet if you don't want to use flags."
+Esailija,995876,27183759,0,"That's even worse than what I just criticized :D It is still at call sites, external to the object, and even more verbose"
+Esailija,995876,26353702,0,Could be that 8081 is responding with CORS headers but doesn't allow credentials. Otherwise seems security bug.. see here that different port is different origin http://en.wikipedia.org/wiki/Same_origin_policy#Origin_determination_rules
+quinnirill,998073,26321564,0,"Oh goodie, yet another backface-visibility bug. Have you filed a bug on Blink yet? Probably WebKit too, but don't have Safari available right now. I bet there's some sort of trickery to work around this, but I need to test a bit."
+Esailija,995876,27088298,0,@elclanrs more generally: conventions that are standard to the language
+Esailija,995876,27026937,0,"Not being able to use timeouts with sync request is a good argument against using sync requests but that was not the point. The point is to find evidence that one could leak memory (probably defined as memory that cannot be reclaimed until the tab is refreshed or closed) when using sync request. If you have unlimited XHR like you would have `while( true )`, then theoretically you will satisfy that definition yes. But I really don't think it was the intention behind the statement."
+Esailija,995876,26881424,0,@Tushar it is creating array and methods in the test loop. See this http://jsperf.com/typed-array-vs-normal-array/4. This tests access speed (which is about same in V8 since it can optimize pure int arrays even if they are not typed). You should specify numbers of your application and what it does.
+Esailija,995876,26992383,0,"What you describe might be true but it's still not leaking anything in any meaning of the word. I would not think the author meant this by using the word ""leak""."
+Esailija,995876,26881941,0,"@Tushar the test performs as much accesses as it can for 5 seconds. In this case it did 3,000,000,000 (5 seconds * 200 million per second * 3)"
+Esailija,995876,26883445,0,@Tushar I am telling you it doesn't matter at all. See edit http://jsperf.com/typed-array-vs-normal-array/4
+Esailija,995876,26355378,0,@CrazyTrain defineProperty or defineProperties?
+Esailija,995876,26920504,0,"@smurfbrainy cool trolling, instead of thinking, why not try it (or alternatively, develop an understanding of the language)"
+Esailija,995876,26363761,0,"Even if there appears to be debate, 99.9999% of the code out there uses semi-colons"
+Esailija,995876,26960574,0,Why not do this in Javascript?
+Esailija,995876,26972351,0,An extension should just do the bare minimum that was not possible to do from js and all the high level stuff should be in the js part which calls it.
+Esailija,995876,26992714,0,"After you hit `.send()` on a synchronous request, the control will not come back to you until there is an error or success. The xhr events are also not fired if the request is synchronous. Any external events are not handled until the execution yields. You are correct that if the spec is not implemented like it says, then there would probably be problems. But that's not the fault of synchronous requests at all."
+Esailija,995876,27026732,0,"@DmitryKaigorodov Nothing will happen until the XHR has finished, so why is that a problem?"
+Esailija,995876,26362699,0,@zra so what is the problem? The info about error is stored in .stack and .message
+Esailija,995876,26353930,0,"@thomas actually never mind, control characters are illegal as input values it seems"
+Esailija,995876,27008385,0,@CrazyTrain they can be caught by jshint though
+Esailija,995876,27008687,0,@CrazyTrain arguing how development is like without using obvious tools like jshint is just wrong. Is there a tool that will tell when leaving out semicolon causes the statement on next line be treated as part of current statement?
+Esailija,995876,27009924,0,"@CrazyTrain by saying that one can forget semicolons you imply the absence of any tools. Because it cannot happen when using a tool. Whereas when coding without semicolons one needs human judgement to determine if the code is buggy as you say you ""won't be caught off guard"" because you have developed a habit. When you compare these, both are just as worse off when not using any tools, but semicolons are far better off when using tools. Although this is only because I imagine there is not a tool that could detect when a statement on a new line wasn't intended to follow the previous one."
+D_K,158328,26403358,0,"isn't it so, that you would like _not_ to href a page that is currently being viewed? I.e. if the part with ($x == $page) evaluates to true you shouldn't put href around the page and put it otherwise."
+Esailija,995876,27025560,0,"@DmitryKaigorodov As I understand it, major GCs are performed when memory has become tight and needed. However, it's not memory leak because that memory will be available when you need it. I must emphasize that all JS DOM objects were like this until ~2013 in Chrome! So it's not a big deal and still not a leak."
+jku,2241569,27092714,0,@Ragav He already mentioned it: typically you would use `g_idle_add()` from the non-main threads.

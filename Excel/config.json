@@ -1,0 +1,7 @@
+{
+    "root_folder" : "E:\\Repositories\\Github\\Python\\Excel\\Tmp",
+    "extension" : ".xlsx",
+    "filter_chars" : "%&+ ,-.0123456789:;ABCDEFGHIJKLMNOPQRSTUVWXYZ\\][_`abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ",
+    "filter_text_file" : "filtername.xlsx",
+    "filter_unit_file" : "filtername.xlsx"
+}
