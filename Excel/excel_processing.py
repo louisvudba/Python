@@ -15,32 +15,34 @@ archive_folder = data['root_folder'] + '\Archive'
 file_list = [x for x in os.listdir(input_folder) if x.endswith(data['extension'])]
 filter_dict = data["filter_chars"]
 
-def main(arg):
+def main(args):
     short_options = "ht:"
     long_options = ["help", "type="]
 
     try:
-        arguments, values = getopt.getopt(argument_list, short_options, long_options)
+        arguments, values = getopt.getopt(args, short_options, long_options)
     except getopt.error as err:
         # Output error, and return with an error code
         print (str(err))
         sys.exit(2)
-    
-    for current_argument, current_value in arguments:
-        if current_argument in ("-h", "--help"):
+   
+    for arg, value in arguments:
+        if arg in ("-h", "--help"):
             print ("Displaying help")
-        elif current_argument in ("-t", "--type"):
-            itype = current_value.lower()
-        
+        elif arg in ("-t", "--type"):
+            itype = value.lower()
+    
+    #print (itype)
     Choice(itype)
 
 def Choice(itype):
+    print (itype)
     switcher = {
-            1: clean_data,
-            2: filter_data,
-            3: filter_unit
+            "clean": clean_data,
+            "data": filter_data,
+            "unit": filter_unit
         }
-    return switcher.get(argument, lambda: "Invalid!!")() 
+    return switcher.get(itype, lambda: "Invalid!!")()
 
 def clean_data():
     for file in file_list:
