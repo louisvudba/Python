@@ -7,9 +7,10 @@ config = 'config.json'
 with open(config, encoding="utf8") as json_file: # encoding for valid character
     data = json.load(json_file)
 
-input_folder = data['root_folder'] + '\Input'
-output_folder = data['root_folder'] + '\Output'
-archive_folder = data['root_folder'] + '\Archive'
+root_folder = data['root_folder']
+input_folder = root_folder + '\Input'
+output_folder = root_folder + '\Output'
+archive_folder = root_folder + '\Archive'
 
 # get file list
 file_list = [x for x in os.listdir(input_folder) if x.endswith(data['extension'])]
@@ -163,7 +164,7 @@ def filter_unit():
                     else:
                         filter_value = item['Filter']                    
                     #if text_value.lower().find(item['Name'].lower()) > -1:
-                    if re.search(item['Name'].lower(),text_value.lower())
+                    if re.search(item['Name'].lower(),text_value.lower()):
                         result = filter_value
                         break
                 df.at[i,j] = result
