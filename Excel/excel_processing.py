@@ -30,13 +30,11 @@ def main(args):
         if arg in ("-h", "--help"):
             print ("Displaying help")
         elif arg in ("-t", "--type"):
-            itype = value.lower()
+            itype = value.lower()    
     
-    #print (itype)
     Choice(itype)
 
-def Choice(itype):
-    print (itype)
+def Choice(itype):    
     switcher = {
             "clean": clean_data,
             "data": filter_data,
@@ -84,7 +82,7 @@ def clean_data():
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
-    return "Done clean_data"
+    print("Done clean_data")
 
 def filter_data():
     filter_file = os.path.join(root_folder, data["filter_text_file"])
@@ -130,7 +128,7 @@ def filter_data():
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
-    return "Done filter_data" 
+    print("Done filter_data")
 
 def filter_unit():
     filter_file = os.path.join(root_folder, data["filter_unit_file"])
@@ -163,8 +161,9 @@ def filter_unit():
                     if pd.isna(item['Filter']):
                         filter_value = ''
                     else:
-                        filter_value = item['Filter']
-                    if text_value.lower().find(item['Name'].lower()) > -1:
+                        filter_value = item['Filter']                    
+                    #if text_value.lower().find(item['Name'].lower()) > -1:
+                    if re.search(item['Name'].lower(),text_value.lower())
                         result = filter_value
                         break
                 df.at[i,j] = result
@@ -173,7 +172,7 @@ def filter_unit():
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
-    return "Done filter_unit" 
+    print("Done filter_unit")
 
 if __name__ == "__main__":
    main(sys.argv[1:])
