@@ -83,7 +83,7 @@ def clean_data():
 
         print(df.shape)
         df.to_excel(output_file, index = False)
-        #shutil.move(input_file, archive_file)
+        shutil.move(input_file, archive_file)
         print(datetime.now())
     print("Done clean_data")
 
