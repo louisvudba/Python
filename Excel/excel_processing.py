@@ -51,16 +51,18 @@ def clean_data():
         print('processing ' + file)
         print(datetime.now())    
         
-        df = pd.read_excel(input_file)
+        df = pd.read_excel(input_file, keep_default_na=False)
 
         r, c = df.shape
         i = 0
         j = 0
 
-        while i < r:
+        while i < r:            
             j = 0
             while j < c:
                 cell_value = df.iat[i,j]
+                if i == 0:                    
+                    print (cell_value)
                 if not (isinstance(cell_value, numbers.Real)):
                     if (pd.isna(cell_value)):
                         text_value = ''
@@ -81,7 +83,7 @@ def clean_data():
 
         print(df.shape)
         df.to_excel(output_file, index = False)
-        shutil.move(input_file, archive_file)
+        #shutil.move(input_file, archive_file)
         print(datetime.now())
     print("Done clean_data")
 
@@ -123,6 +125,7 @@ def filter_data():
                     result = ignore_case.sub(filter_value, text_value)
                     text_value = result
                 df.iat[i,j] = result
+                j += 1 
             i += 1
 
         print(df.shape)
@@ -158,7 +161,8 @@ def filter_unit():
                 else:
                     text_value = str(cell_value)        
                 result = data["default_unit"]
-                for item in filter_dict:
+                
+                for item in filter_dict:                
                     if pd.isna(item['Filter']):
                         filter_value = ''
                     else:
@@ -167,7 +171,8 @@ def filter_unit():
                     if re.search(item['Name'].lower(),text_value.lower()):
                         result = filter_value
                         break
-                df.at[i,j] = result
+                df.at[i,j] = result                
+                j += 1 
             i += 1
         print(df.shape)
         df.to_excel(output_file, index = False)
