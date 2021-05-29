@@ -2,6 +2,7 @@ import sys, getopt, os, shutil
 import pandas as pd
 import json, numbers, re
 from datetime import datetime
+from decimal import Decimal
 
 config = 'config.json'
 with open(config, encoding="utf8") as json_file: # encoding for valid character
@@ -39,9 +40,35 @@ def Choice(itype):
     switcher = {
             "clean": clean_data,
             "data": filter_data,
-            "unit": filter_unit
+            "unit": filter_unit,
+            "crossjoin": crossjoin_data
         }
     return switcher.get(itype, lambda: "Invalid!!")()
+
+def crossjoin_data():
+    #crossjoin_col = data["crossjoin_column"]
+
+    for file in file_list:
+        input_file = os.path.join(input_folder, file)
+        output_file = os.path.join(output_folder, 'output_crossjoin_' + file)
+        archive_file = os.path.join(archive_folder, file)
+        print('processing ' + file)
+        print(datetime.now())    
+        
+        df = pd.read_excel(input_file, keep_default_na=False)
+
+        list1 = [f'{a}, {b}, {c} ==== {d}' 
+            for a in df.Item if a != '' 
+            for b in df.Type if b != '' 
+            for c in df.Size if c != ''
+            for d in df.ext if d != ''
+            ]
+        dfRes = pd.DataFrame(data=list1)
+        #print(df)
+        dfRes.to_excel(output_file, index = False)
+        shutil.move(input_file, archive_file)
+        print(datetime.now())
+    print("Done crossjoin_data")
 
 def clean_data():
     for file in file_list:
@@ -57,12 +84,10 @@ def clean_data():
         i = 0
         j = 0
 
-        while i < r:            
+        while i < r:           
             j = 0
             while j < c:
-                cell_value = df.iat[i,j]
-                if i == 0:                    
-                    print (cell_value)
+                cell_value = df.iat[i,j]                
                 if not (isinstance(cell_value, numbers.Real)):
                     if (pd.isna(cell_value)):
                         text_value = ''
@@ -81,7 +106,6 @@ def clean_data():
                 j += 1        
             i += 1
 
-        print(df.shape)
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
@@ -128,7 +152,6 @@ def filter_data():
                 j += 1 
             i += 1
 
-        print(df.shape)
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
@@ -174,7 +197,6 @@ def filter_unit():
                 df.at[i,j] = result                
                 j += 1 
             i += 1
-        print(df.shape)
         df.to_excel(output_file, index = False)
         shutil.move(input_file, archive_file)
         print(datetime.now())
