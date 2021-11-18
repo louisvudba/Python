@@ -145,7 +145,7 @@ def filter_data():
                         filter_value = ''
                     else:
                         filter_value = item['Filter']
-                    if text_len == len(item['Name']): # text_len: length of data, len(item['Name']): length of each filter rule
+                    if (text_len == len(item['Name'])): # text_len: length of data, len(item['Name']): length of each filter rule
                         ignore_case = re.compile(re.escape(item['Name']), re.IGNORECASE)
                         result = ignore_case.sub(filter_value, text_value)
                         text_value = result
