@@ -1,8 +1,11 @@
 {
-    "root_folder" : "I:\\Github\\Python\\Tmp",
+    "root_folder" : "E:\\Repositories\\Github\\Python\\Excel\\Tmp",
     "extension" : ".xlsx",
-    "filter_chars" : "%&+ ,-.0123456789:;ABCDEFGHIJKLMNOPQRSTUVWXYZ\\][_`abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ",
-    "filter_text_file" : "filtername.xlsx",
-    "filter_unit_file" : "filtername.xlsx",
-    "default_unit" : ""
+    "filter_chars" : " 0123456789%&+,-.:;ABCDEFGHIJKLMNOPQRSTUVWXYZ\//()*][_abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ",
+    "filter_productname" : " 0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "filter_charsbill" : " 0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "filter_text_file" : "doitenhang.xlsx",
+    "thaythetukhoa" : "thaythetukhoa.xlsx",
+    "filter_unit_file" : "dvt.xlsx",
+    "default_unit" : "chiếc"
 }

@@ -1,0 +1,11 @@
+{
+    "root_folder" : "E:\\Repositories\\Github\\Python\\Training",
+    "extension" : ".xlsx",
+    "filter_chars" : " 0123456789%&+,-.:;ABCDEFGHIJKLMNOPQRSTUVWXYZ\//()*][_abcdefghijklmnopqrstuvwxyzáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệíìỉĩịóòỏõọôốồổỗộơớờởỡợúùủũụưứừửữựýỳỷỹỵđÁÀẢÃẠĂẮẰẲẴẶÂẤẦẨẪẬÉÈẺẼẸÊẾỀỂỄỆÍÌỈĨỊÓÒỎÕỌÔỐỒỔỖỘƠỚỜỞỠỢÚÙỦŨỤƯỨỪỬỮỰÝỲỶỸỴĐ",
+    "filter_productname" : " 0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "filter_charsbill" : " 0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+    "filter_text_file" : "doitenhang.xlsx",
+    "thaythetukhoa" : "thaythetukhoa.xlsx",
+    "filter_unit_file" : "dvt.xlsx",
+    "default_unit" : "chiếc"
+}
