@@ -4,11 +4,11 @@ from libs.mongo import MongoImpl
 from datetime import datetime, timedelta
 
 config = {
-    "host": "dc1p-retail-mongo-noti-01.citigo.io:27017,dc1p-retail-mongo-noti-02.citigo.io:27017",
+    "host": "*",
     "username": "admin",
-    "password": "7T9g7s6d",
+    "password": "*",
     "authen_source": "admin",
-    "replica_set": "dc1p-retail-noti"
+    "replica_set": "*"
 }
 
 date_range = 10
